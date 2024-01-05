@@ -9,7 +9,21 @@ const CommitLintConfiguration = {
       ["components", "layout", "pages", "styles", "utils", "types"],
     ],
     "scope-case": [2, "always", "kebab-case"],
+    hasLinearTicketNumber: [2, "always"],
   },
+  plugins: [
+    {
+      rules: {
+        hasLinearTicketNumber: ({ subject }) => {
+          const regex = /CHIT-\d+$/;
+          return [
+            regex.test(subject),
+            `Your subject should contain the Linear ticket number in the format of CHIT-*`,
+          ];
+        },
+      },
+    },
+  ],
 };
 
 module.exports = CommitLintConfiguration;
