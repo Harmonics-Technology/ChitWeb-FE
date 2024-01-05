@@ -19,7 +19,10 @@
     "up-latest": "pnpm up-interactive -L",
     "release": "cross-env HUSKY=0 standard-version",
     "push-release": "git push --follow-tags origin main",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "wallet-service-codegen": "openapi -i https://chit-gateway-dev.azurewebsites.net/swagger/Identity/swagger.json -o ./src/services -c axios --useOptions",
+    "gateway-codegen": "openapi -i ./gateway.json -o ./src/services -c axios --useOptions",
+    "codegen": "npx openapi-merge-cli && pnpm gateway-codegen"
   },
   "dependencies": {
     "@chakra-ui/next-js": "^2.1.5",
@@ -32,6 +35,7 @@
     "next": "^14.0.1",
     "next-client-cookies": "^1.1.0",
     "next-pwa": "^5.6.0",
+    "node-forge": "^1.3.1",
     "openapi-typescript-codegen": "^0.25.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
