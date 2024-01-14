@@ -12,4 +12,5 @@ export type UserView = {
   phoneNumberConfirmed?: boolean;
   firstName?: string | null;
   lastName?: string | null;
+  roles?: Array<string> | null;
 };

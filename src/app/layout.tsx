@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    url: 'https://nextarter-chakra.sznm.dev',
+    url: '',
     title: APP_NAME,
     description: 'Your Next Gen Financial Solution',
     images: {

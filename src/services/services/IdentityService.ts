@@ -261,4 +261,18 @@ export class IdentityService {
       },
     });
   }
+
+  /**
+   * @returns UserViewChitStandardResponse Success
+   * @throws ApiError
+   */
+  public static validateToken(): CancelablePromise<UserViewChitStandardResponse> {
+    return __request(OpenAPI, {
+      method: 'GET',
+      url: '/identity/api/Identity/info',
+      errors: {
+        400: `Bad Request`,
+      },
+    });
+  }
 }
