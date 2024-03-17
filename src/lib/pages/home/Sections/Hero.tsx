@@ -82,7 +82,7 @@ const Hero = () => {
             textAlign="center"
             fontSize={60}
             lineHeight="95px"
-            fontWeight={700}
+            fontWeight={900}
           >
             Revolutionize your{' '}
             <Box as="span" color="brand.primary" textDecoration="underline">

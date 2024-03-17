@@ -8,11 +8,12 @@ const Header = () => {
     <Box
       as="header"
       maxW="1440px"
-      position="sticky"
-      top="0"
       mx="auto"
       px="36px"
       my="35px"
+      position="sticky"
+      zIndex="99"
+      top="20px"
     >
       <Flex
         align="center"
@@ -36,9 +37,11 @@ const Header = () => {
               Customer
             </Text>
           </Link>
-          <Text color="white" fontSize="xl" px="5">
-            Merchant
-          </Text>
+          <Link href="/merchant">
+            <Text color="white" fontSize="xl" px="5">
+              Merchant
+            </Text>
+          </Link>
           <Text color="white" fontSize="xl" px="5">
             Documentation
           </Text>

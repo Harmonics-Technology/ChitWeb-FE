@@ -38,9 +38,9 @@ const HowItWorks = () => {
                       Open a CHIT wallet
                     </Heading>
                     <Text color="brand.primary">
-                      Download via Playstore and Apple store Create a CHIT
-                      wallet
+                      Download via Playstore and Apple store.
                     </Text>
+                    <Text color="brand.primary">Create a CHIT wallet</Text>
                   </Stack>
                 </Box>
               </Flex>

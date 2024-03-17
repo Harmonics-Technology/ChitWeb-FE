@@ -14,7 +14,7 @@ const Patrons = () => {
               textAlign="center"
               fontSize={40}
               lineHeight="60px"
-              fontWeight={700}
+              fontWeight={900}
             >
               our patrons are{' '}
               <Box as="span" color="brand.primary" textDecoration="underline">

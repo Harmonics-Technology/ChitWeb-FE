@@ -1,29 +1,9 @@
 'use client';
 
-import { Box, Image, Flex, Heading, Text } from '@chakra-ui/react';
+import { Box, Flex, Heading, Text, Image } from '@chakra-ui/react';
 
 import { ButtonComponent, IconButtonComponent } from '~/lib/components/Button';
 import { ChevronIcon } from '~/lib/components/Icons';
-
-const HeroImage = () => {
-  return (
-    <Box w="100%" h="auto" position="relative">
-      <Image src="/assets/main-image.png" w="100%" h="100%" objectFit="cover" />
-      <Image
-        src="/assets/left-image.png"
-        position="absolute"
-        top="30px"
-        left="-45%"
-      />
-      <Image
-        src="/assets/bottom-image.png"
-        position="absolute"
-        bottom="-17%"
-        left="15%"
-      />
-    </Box>
-  );
-};
 
 const Hero = () => {
   return (
@@ -32,28 +12,27 @@ const Hero = () => {
         w="100%"
         bg="brand.secondary"
         borderRadius="24px"
-        pt="48px"
-        pb="122px"
+        py="48px"
         px="38px"
       >
-        <Flex alignItems="flex-start" justifyContent="space-between">
-          <Box maxW="765px" mt="5">
+        <Flex alignItems="center" gap="50px">
+          <Box maxW="765px">
             <Box mb="25px">
               <Heading
                 color="text.200"
                 textTransform="uppercase"
-                fontSize={60}
+                fontSize={64}
                 lineHeight="100px"
                 fontWeight={900}
               >
-                managing your <br />{' '}
+                expand your e- <br /> commerce{' '}
                 <Box as="span" color="brand.primary" textDecoration="underline">
-                  finances
+                  {' '}
+                  business{' '}
                 </Box>{' '}
-                made easier <br />
-                with our services
               </Heading>
             </Box>
+
             <Box mb="38px">
               <Text fontSize={22} lineHeight="38px" color="text.600">
                 Welcome to the future of finance! Our fintech platform is
@@ -82,8 +61,9 @@ const Hero = () => {
               </Flex>
             </Box>
           </Box>
-          <Box maxW="500px">
-            <HeroImage />
+
+          <Box maxW="492px">
+            <Image src="/assets/mockup-6.png" w="100%" objectFit="cover" />
           </Box>
         </Flex>
       </Box>

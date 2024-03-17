@@ -16,9 +16,9 @@ const Features = () => {
               lineHeight="60px"
               fontWeight={900}
             >
-              embrace the{' '}
+              let chit work for{' '}
               <Box as="span" color="brand.primary" textDecoration="underline">
-                chit
+                you
               </Box>
             </Heading>
             <Text fontSize={18} color="text.400">
@@ -31,19 +31,19 @@ const Features = () => {
         <Box>
           <Flex justifyContent="center" gap="60px">
             <CustomerFeatureCard
-              title="generate chit"
+              title="invoicing"
               description="Our CHIT generation feature provides a quick and convenient method for generating vouchers"
-              img="/assets/customer-feature-1.png"
+              img="/assets/customer-feature-4.png"
             />
             <CustomerFeatureCard
-              title="generate chit"
+              title="seamless transactions"
               description="Our CHIT generation feature provides a quick and convenient method for generating vouchers"
-              img="/assets/customer-feature-2.png"
+              img="/assets/customer-feature-5.png"
             />
             <CustomerFeatureCard
-              title="generate chit"
-              description="Our CHIT generation feature provides a quick and convenient method for generating vouchers"
-              img="/assets/customer-feature-3.png"
+              title="receive voucher payment"
+              description="Experience the convenience of digital vouchers: Receive voucher payment from customers."
+              img="/assets/customer-feature-6.png"
             />
           </Flex>
         </Box>
