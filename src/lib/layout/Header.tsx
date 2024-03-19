@@ -42,9 +42,11 @@ const Header = () => {
               Merchant
             </Text>
           </Link>
-          <Text color="white" fontSize="xl" px="5">
-            Documentation
-          </Text>
+          <Link href="/documentation">
+            <Text color="white" fontSize="xl" px="5">
+              Documentation
+            </Text>
+          </Link>
         </Flex>
 
         <Flex justifyContent="space-between" alignItems="center">

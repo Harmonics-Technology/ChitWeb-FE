@@ -46,3 +46,9 @@ export interface CustomerFeatureCardProps {
   title: string;
   description: string;
 }
+
+export interface InstructionComponentProps {
+  title: string;
+  descriptions: string[];
+  questions: string[];
+}
