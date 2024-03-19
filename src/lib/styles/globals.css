@@ -1,1 +1,30 @@
 /* Global Styling here */
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ebe7fd99;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9c9b9b;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  border-radius: 50px;
+}
+
+@font-face {
+  font-family: 'lato-black';
+  src: url('../../../public/fonts/Lato-Black.ttf');
+}
+
+@font-face {
+  font-family: lato-bold;
+  src: url('../../../public//fonts/Lato-Bold.ttf');
+}

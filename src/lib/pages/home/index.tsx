@@ -1,29 +1,30 @@
 'use client';
 
-import { Flex, Text } from '@chakra-ui/react';
+import { Flex, Text, Box, Stack } from '@chakra-ui/react';
 
+import DownloadApp from '~/lib/components/DownloadApp';
 import CTASection from '~/lib/components/samples/CTASection';
 import SomeImage from '~/lib/components/samples/SomeImage';
 import SomeText from '~/lib/components/samples/SomeText';
 import EncryptionService from '~/lib/utilities/encryptions';
 import { IdentityService, LoginRequest, WalletService } from '~/services';
 
+import Features from './Sections/Features';
+import Hero from './Sections/Hero';
+import HowItWorks from './Sections/HowItWorks';
+import Patrons from './Sections/Patrons';
+import Perks from './Sections/Perks';
+
 const Home = () => {
   return (
-    <Flex
-      direction="column"
-      alignItems="center"
-      justifyContent="center"
-      // minHeight="100vh"
-      // gap={4}
-      // mb={8}
-      w="full"
-      // background="brand.primary"
-    >
-      <Text color="white" fontSize="6xl">
-        CHIT - Revolutionizing Payments
-      </Text>
-    </Flex>
+    <Box>
+      <Hero />
+      <Perks />
+      <Features />
+      <HowItWorks />
+      <Patrons />
+      <DownloadApp />
+    </Box>
   );
 };
 

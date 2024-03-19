@@ -16,6 +16,16 @@ const extendedColors: DeepPartial<
     900: '#180E43',
     // @ts-expect-error
     primary: '#603FEF',
+    secondary: '#F3F1FE',
+  },
+  text: {
+    100: '#434343',
+    200: '#211F1F',
+    300: '#11E4AC',
+    400: '#434343',
+    500: '#FFFFFF',
+    600: '#333333',
+    700: '#41F1C2',
   },
 };
 

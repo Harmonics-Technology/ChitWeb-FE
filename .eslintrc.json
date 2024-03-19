@@ -10,6 +10,10 @@
     "@typescript-eslint/ban-ts-comment": "off",
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars-experimental": "off",
+    "react/prop-types": "off",
+    "react/no-array-index-key": "off",
+    "react/no-unescaped-entities": "off",
+    "react/no-unused-prop-types": "off",
     "prettier/prettier": [
         "off",
         {

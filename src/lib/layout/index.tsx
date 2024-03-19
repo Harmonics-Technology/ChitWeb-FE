@@ -1,7 +1,8 @@
 'use client';
 
 import { Box } from '@chakra-ui/react';
-import type { ReactNode } from 'react';
+import { useEffect, type ReactNode } from 'react';
+import '../styles/globals.css';
 
 import Footer from './Footer';
 import Header from './Header';
@@ -11,6 +12,13 @@ type LayoutProps = {
 };
 
 const Layout = ({ children }: LayoutProps) => {
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import('locomotive-scroll')).default;
+      const locomotiveScroll = new LocomotiveScroll();
+    })();
+  }, []);
+
   return (
     <Box transition="0.5s ease-out">
       <Box>
