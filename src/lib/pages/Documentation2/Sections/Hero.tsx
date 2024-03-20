@@ -25,11 +25,6 @@ const Hero = () => {
             >
               documentation
             </Heading>
-            <Text textAlign="center" lineHeight="38px" fontSize={24}>
-              Welcome to the future of finance! Our fintech platform is designed
-              to simplify your financial life, providing you with innovative
-              tools and cutting-edge technology to make payment with ease
-            </Text>
             <Box>
               <Flex alignItems="center" gap="30px">
                 <ButtonComponent

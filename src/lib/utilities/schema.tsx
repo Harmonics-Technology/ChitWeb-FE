@@ -52,3 +52,8 @@ export interface InstructionComponentProps {
   descriptions: string[];
   questions: string[];
 }
+
+export interface DocumentationButtonProps {
+  step: number;
+  setStep: (step: number) => void;
+}

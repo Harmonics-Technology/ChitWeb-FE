@@ -4,7 +4,14 @@ import InstructionComponent from '~/lib/components/Instruction';
 
 const Instructions = () => {
   return (
-    <Box py="60px" maxW="1232px" mx="auto">
+    <Box
+      py="60px"
+      maxW="1232px"
+      mx="auto"
+      bgImage="url('/assets/right-line.svg')"
+      backgroundRepeat="no-repeat"
+      backgroundPosition="right"
+    >
       <Box mb="70px">
         <Box>
           <Heading
