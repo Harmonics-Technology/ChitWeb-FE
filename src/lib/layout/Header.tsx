@@ -1,9 +1,30 @@
 import { Box, Flex, Image, Text, Button } from '@chakra-ui/react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useLayoutEffect, useState } from 'react';
 
 import ThemeToggle from './ThemeToggle';
 
 const Header = () => {
+  const [isSigningUp, setIsSigningUp] = useState<boolean>(false);
+  const pathname = usePathname();
+
+  useLayoutEffect(() => {
+    const routesToHideNavbar = [
+      '/signup',
+      '/signin',
+      '/forgot-password',
+      '/reset-password',
+    ];
+    setIsSigningUp(
+      routesToHideNavbar.some((route) => pathname.includes(route))
+    );
+  }, [pathname]);
+
+  if (isSigningUp) {
+    return null;
+  }
+
   return (
     <Box
       as="header"
@@ -50,12 +71,16 @@ const Header = () => {
         </Flex>
 
         <Flex justifyContent="space-between" alignItems="center">
-          <Text color="white" fontSize="xl" px="5">
-            Login
-          </Text>
-          <Button variant="outline" color="white" size="lg">
-            Sign Up
-          </Button>
+          <Link href="/signin">
+            <Text color="white" fontSize="xl" px="5">
+              Login
+            </Text>
+          </Link>
+          <Link href="/signup">
+            <Button variant="outline" color="white" size="lg">
+              Sign Up
+            </Button>
+          </Link>
         </Flex>
       </Flex>
     </Box>

@@ -57,3 +57,17 @@ export interface DocumentationButtonProps {
   step: number;
   setStep: (step: number) => void;
 }
+
+export interface FormInputProps {
+  type: string;
+  width: string;
+  value: string;
+  setValue: (value: string) => void;
+  placeholder?: string;
+}
+
+export interface CarouselProps {
+  image: string;
+  title: string;
+  description: string;
+}
