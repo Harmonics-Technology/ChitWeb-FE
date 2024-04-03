@@ -71,3 +71,33 @@ export interface CarouselProps {
   title: string;
   description: string;
 }
+
+export interface SideNavLinkProps {
+  text: string;
+  isActive: boolean;
+  Icon: any;
+  onClick: () => void;
+}
+
+export interface SideNavProps {
+  navPosition: number;
+  setNavPosition: (step: number) => void;
+}
+
+export interface SideNavIconProps {
+  isActive: boolean;
+}
+
+export interface WalletCardProps {
+  title: string;
+  currency: string;
+  balance: string;
+  date: string;
+  headingColor: string;
+}
+
+export interface QuickActionItem {
+  bgColor: string;
+  title: string;
+  icon: any;
+}

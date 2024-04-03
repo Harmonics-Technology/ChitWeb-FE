@@ -63,6 +63,7 @@ const Footer = () => {
       '/signin',
       '/forgot-password',
       '/reset-password',
+      '/dashboard',
     ];
     setIsSigningUp(
       routesToHideNavbar.some((route) => pathname.includes(route))
