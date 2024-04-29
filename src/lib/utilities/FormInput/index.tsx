@@ -22,7 +22,8 @@ const FormInput = ({
         fontSize={15}
         border="1px solid"
         borderColor="border.100"
-        _placeholder={{ color: 'text.800', fontWeight: 400 }}
+        fontWeight={400}
+        _placeholder={{ color: 'text.800', fontWeight: 400, fontSize: 15 }}
       />
     </Box>
   );

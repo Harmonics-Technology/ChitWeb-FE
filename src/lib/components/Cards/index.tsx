@@ -1,4 +1,14 @@
-import { Box, Image, Heading, Text, Stack, Flex } from '@chakra-ui/react';
+import {
+  Box,
+  Image,
+  Heading,
+  Text,
+  Stack,
+  Flex,
+  Button,
+  VStack,
+} from '@chakra-ui/react';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 import { FiveStarIcon } from '../Icons';
 import type {
@@ -6,6 +16,7 @@ import type {
   FeatureCardProps,
   ReviewCardProps,
   CustomerFeatureCardProps,
+  ProductCardProps,
 } from '~/lib/utilities/schema';
 
 const PerksCard = ({ cardImg, title, description }: PerksCardProps) => {
@@ -179,6 +190,92 @@ export const CustomerFeatureCard = ({
           </Stack>
         </Box>
       </Stack>
+    </Box>
+  );
+};
+
+export const VirtualCard = () => {
+  return (
+    <Box
+      p="5"
+      borderRadius="8px"
+      w="100%"
+      h="195px"
+      bgGradient="linear(to-br, bg.100 20%, bg.200 80%)"
+    >
+      <Stack direction="column" justifyContent="space-between" h="100%">
+        <Box>
+          <Flex alignItems="center" justifyContent="space-between">
+            <Image src="/assets/chip.svg" />
+            <Button
+              bg="none"
+              p="0"
+              _hover={{ bg: 'none' }}
+              color="text.500"
+              fontSize={20}
+            >
+              <FaEyeSlash />
+            </Button>
+          </Flex>
+        </Box>
+
+        <Box>
+          <Text
+            color="text.500"
+            fontSize={20}
+            letterSpacing="3px"
+            fontWeight={600}
+          >
+            2345 5445 9845 0345
+          </Text>
+        </Box>
+
+        <Box>
+          <Flex alignItems="center" justifyContent="space-between">
+            <Box>
+              <Stack spacing="5px" color="text.500">
+                <Text fontSize={11}>Card Holder Name</Text>
+                <Heading fontWeight={700} fontSize={14} letterSpacing="1px">
+                  Ogunjimi Peace
+                </Heading>
+              </Stack>
+            </Box>
+            <Box>
+              <Stack spacing="5px" color="text.500">
+                <Text fontSize={11}>Expiry Date</Text>
+                <Heading fontWeight={700} fontSize={14} letterSpacing="1px">
+                  10/25
+                </Heading>
+              </Stack>
+            </Box>
+            <Image src="/assets/mastercard-logo.svg" />
+          </Flex>
+        </Box>
+      </Stack>
+    </Box>
+  );
+};
+
+export const ProductCard = ({ image, title, category }: ProductCardProps) => {
+  return (
+    <Box w="140px" h="auto" borderRadius="12px" boxShadow="lg" p="3">
+      <VStack>
+        <Image src={image} />
+        <Text fontWeight={600} fontSize={16}>
+          {title}
+        </Text>
+        <Text
+          fontSize={14}
+          fontWeight={500}
+          borderRadius="8px"
+          bg="brand.100"
+          color="brand.primary"
+          px="10px"
+          py="5px"
+        >
+          {category}
+        </Text>
+      </VStack>
     </Box>
   );
 };

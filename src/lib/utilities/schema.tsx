@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react';
+
 export interface UnderlineTextProps {
   text: string;
   color: string;
@@ -39,6 +41,7 @@ export interface IconButtonProps {
   icon: any;
   width: string;
   flip: boolean;
+  onClick: () => void;
 }
 
 export interface CustomerFeatureCardProps {
@@ -74,14 +77,18 @@ export interface CarouselProps {
 
 export interface SideNavLinkProps {
   text: string;
-  isActive: boolean;
   Icon: any;
-  onClick: () => void;
+  link: string;
 }
 
 export interface SideNavProps {
   navPosition: number;
   setNavPosition: (step: number) => void;
+}
+
+export interface VerificationFlowProps {
+  position: number;
+  setPosition: (step: number) => void;
 }
 
 export interface SideNavIconProps {
@@ -96,8 +103,124 @@ export interface WalletCardProps {
   headingColor: string;
 }
 
-export interface QuickActionItem {
+export interface QuickActionItemProps {
   bgColor: string;
   title: string;
   icon: any;
+  onClick: () => void;
+}
+
+export interface VerificationSlideProps {
+  title: string;
+  description: string;
+  image: string;
+  text: string;
+  onClick: () => void;
+  linkText: string;
+}
+
+export interface CustomModalprops {
+  isOpen: boolean;
+  onClose: () => void;
+  children: ReactNode;
+}
+
+export interface StepProps {
+  step: number;
+  setStep: (step: number) => void;
+}
+
+export interface CloseModalProps {
+  closeModal: () => void;
+}
+
+export interface OpenModalProps {
+  openModal: () => void;
+}
+
+export interface OutlineButtonProps {
+  color: string;
+  text: string;
+  onClick: () => void;
+  width: string;
+}
+
+export interface TransactionStatusProps {
+  status: string;
+  closeModal: () => void;
+}
+
+export interface TableHerderItemProps {
+  title: string;
+  width: string;
+}
+
+export interface TransactionListItemProps {
+  image: string;
+  transactionTitle: string;
+  transactionType: string;
+  transactionId: string;
+  transactionStatus: string;
+  transactionDate: string;
+  transactionTime: string;
+  transactionAmount: string;
+  action: () => void;
+}
+
+export interface InvoiceListItemProps {
+  image: string;
+  transactionTitle: string;
+  transactionId: string;
+  transactionStatus: string;
+  transactionDate: string;
+  transactionTime: string;
+  transactionAmount: string;
+  action: () => void;
+}
+
+export interface TransactionDetailsProps {
+  transactionTitle: string;
+  transactionType: string;
+  transactionId: string;
+  transactionStatus: string;
+  transactionDate: string;
+  transactionAmount: string;
+  transactionSource: string;
+  downloadReceipt: () => void;
+  shareReceipt: () => void;
+}
+
+export interface IconProps {
+  isActive: boolean;
+}
+
+export interface BackButtonProps {
+  link: string;
+  title: string;
+}
+
+export interface NavigationItemProps {
+  icon: any;
+  title: string;
+  description: string;
+  isActive: boolean;
+  onClick: () => void;
+}
+
+export interface ProductCardProps {
+  image: string;
+  title: string;
+  category: string;
+}
+
+export interface BillItemButtonProps {
+  image: string;
+  label: string;
+  link: string;
+}
+
+export interface BillerItemButtonProps {
+  image: string;
+  label: string;
+  onClick: () => void;
 }

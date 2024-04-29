@@ -1,27 +1,37 @@
 'use client';
 
-import { Box, Stack } from '@chakra-ui/react';
-import React, { useState } from 'react';
+import { Box, Flex, Stack } from '@chakra-ui/react';
 
-import Header from './components/Header';
-import SideNav from './components/SideNav';
-import Dashboard from './pages/Dashboard';
+import DownloadPDF from './components/DownloadPDF';
+import Invoice from './components/Invoice';
+import QuickActions from './components/QuickActions';
+import ScheduledPayments from './components/ScheduledPayments';
+import Transactions from './components/Transactions';
+import VerificationCarousel from './components/VerificationCarousel';
+import Wallets from './components/Wallets';
 
-const Index = () => {
-  const [navPosition, setNavPosition] = useState(0);
+const index = () => {
   return (
-    <Box position="relative" bg="rgba(100, 100, 100, 0.1)">
-      <Stack direction="row">
-        <SideNav navPosition={navPosition} setNavPosition={setNavPosition} />
-        <Box p="25px" position="absolute" left="18%" w="82%">
-          <Stack direction="column" spacing="22px">
-            <Header />
-            <Box>{navPosition === 0 && <Dashboard />}</Box>
+    <Box>
+      <Flex w="100%" alignItems="flex-start" gap="24px">
+        <Box w="65%">
+          <Stack spacing="30px">
+            <VerificationCarousel />
+            <Wallets />
+            <Invoice />
+            <Transactions />
           </Stack>
         </Box>
-      </Stack>
+        <Box w="35%">
+          <Stack spacing="30px">
+            <QuickActions />
+            <ScheduledPayments />
+            <DownloadPDF />
+          </Stack>
+        </Box>
+      </Flex>
     </Box>
   );
 };
 
-export default Index;
+export default index;
