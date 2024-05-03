@@ -1,15 +1,6 @@
 'use client';
 
-import {
-  Box,
-  ListItem,
-  List,
-  Image,
-  VStack,
-  Flex,
-  Text,
-  Stack,
-} from '@chakra-ui/react';
+import { Box, Image, VStack, Flex, Text, Stack } from '@chakra-ui/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
