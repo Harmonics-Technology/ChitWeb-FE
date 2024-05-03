@@ -8,6 +8,7 @@ const FormInput = ({
   value,
   setValue,
   placeholder,
+  readonly,
 }: FormInputProps) => {
   return (
     <Box w={width}>
@@ -23,6 +24,7 @@ const FormInput = ({
         border="1px solid"
         borderColor="border.100"
         fontWeight={400}
+        readOnly={readonly}
         _placeholder={{ color: 'text.800', fontWeight: 400, fontSize: 15 }}
       />
     </Box>
