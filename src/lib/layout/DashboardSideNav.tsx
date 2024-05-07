@@ -1,15 +1,6 @@
 'use client';
 
-import {
-  Box,
-  ListItem,
-  List,
-  Image,
-  VStack,
-  Flex,
-  Text,
-  Stack,
-} from '@chakra-ui/react';
+import { Box, Image, Flex, Text, Stack } from '@chakra-ui/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
@@ -22,7 +13,7 @@ import {
   ReferralIcon,
   LogoutIcon,
 } from '~/lib/components/Icons';
-import type { SideNavLinkProps, SideNavProps } from '~/lib/utilities/schema';
+import type { SideNavLinkProps } from '~/lib/utilities/schema';
 
 const SideNavLink = ({ text, Icon, link }: SideNavLinkProps) => {
   const pathname = usePathname();

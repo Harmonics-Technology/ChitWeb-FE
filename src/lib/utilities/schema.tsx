@@ -67,6 +67,7 @@ export interface FormInputProps {
   value: string;
   setValue: (value: string) => void;
   placeholder?: string;
+  readonly?: boolean;
 }
 
 export interface CarouselProps {
@@ -203,6 +204,13 @@ export interface NavigationItemProps {
   icon: any;
   title: string;
   description: string;
+  isActive: boolean;
+  onClick: () => void;
+}
+
+export interface SecurityNavigationItemProps {
+  Icon: any;
+  title: string;
   isActive: boolean;
   onClick: () => void;
 }

@@ -1,8 +1,8 @@
 {
-  "name": "nextarter-chakra",
+  "name": "chit",
   "version": "0.1.0",
   "private": true,
-  "author": "sozonome",
+  "author": "harmonics-technology",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -19,7 +19,7 @@
     "up-latest": "pnpm up-interactive -L",
     "release": "cross-env HUSKY=0 standard-version",
     "push-release": "git push --follow-tags origin main",
-    "prepare": "husky install",
+    "prepare": "husky",
     "gateway-codegen": "openapi -i ./gateway.json -o ./src/services -c axios --useOptions",
     "codegen": "npx openapi-merge-cli && pnpm gateway-codegen"
   },
