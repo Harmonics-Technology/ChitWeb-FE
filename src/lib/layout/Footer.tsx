@@ -8,6 +8,8 @@ import {
   ListItem,
   Heading,
 } from '@chakra-ui/react';
+import { usePathname } from 'next/navigation';
+import { useState, useLayoutEffect } from 'react';
 
 import { PurpleChitLogo } from '../components/Logo';
 
@@ -52,6 +54,25 @@ const FooterList: React.FC<FooterListProps> = ({ headingText, items }) => {
 };
 
 const Footer = () => {
+  const [isSigningUp, setIsSigningUp] = useState<boolean>(false);
+  const pathname = usePathname();
+
+  useLayoutEffect(() => {
+    const routesToHideNavbar = [
+      '/signup',
+      '/signin',
+      '/forgot-password',
+      '/reset-password',
+    ];
+    setIsSigningUp(
+      routesToHideNavbar.some((route) => pathname.includes(route))
+    );
+  }, [pathname]);
+
+  if (isSigningUp) {
+    return null;
+  }
+
   return (
     <Box
       as="footer"
