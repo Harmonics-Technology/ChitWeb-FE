@@ -46,3 +46,14 @@ export interface CustomerFeatureCardProps {
   title: string;
   description: string;
 }
+
+export interface InstructionComponentProps {
+  title: string;
+  descriptions: string[];
+  questions: string[];
+}
+
+export interface DocumentationButtonProps {
+  step: number;
+  setStep: (step: number) => void;
+}
