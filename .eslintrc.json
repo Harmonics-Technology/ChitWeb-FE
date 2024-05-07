@@ -14,6 +14,8 @@
     "react/no-array-index-key": "off",
     "react/no-unescaped-entities": "off",
     "react/no-unused-prop-types": "off",
+    "sonarjs/no-duplicate-string": "off",
+    "import/no-cycle": "off",
     "prettier/prettier": [
         "off",
         {

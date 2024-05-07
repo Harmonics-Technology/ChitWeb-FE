@@ -41,6 +41,7 @@ const Hero = () => {
                   icon={ChevronIcon}
                   width="211px"
                   flip
+                  onClick={() => {}}
                 />
               </Flex>
             </Box>
