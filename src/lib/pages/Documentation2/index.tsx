@@ -4,6 +4,7 @@ import { Box } from '@chakra-ui/react';
 import { useState } from 'react';
 
 import DataPrivacy from './Sections/DataPrivacy';
+import DocumentationImages from './Sections/DocumentationImages';
 import GettingStarted from './Sections/GettingStarted';
 import Header from './Sections/Header';
 import Hero from './Sections/Hero';
@@ -26,6 +27,7 @@ const Index = () => {
         {step === 0 && <GettingStarted />}
         {step === 1 && <DataPrivacy />}
       </Box>
+      <DocumentationImages />
     </Box>
   );
 };

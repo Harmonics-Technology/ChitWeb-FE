@@ -25,7 +25,7 @@ const DownloadApp = () => {
                   fontWeight={700}
                   color="text.500"
                 >
-                  Download Chit App Today
+                  DOWNLOAD CHIT APP TODAY
                 </Heading>
 
                 <Box maxW="470px">

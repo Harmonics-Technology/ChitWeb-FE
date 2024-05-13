@@ -36,13 +36,13 @@ const Features = () => {
               img="/assets/customer-feature-1.png"
             />
             <CustomerFeatureCard
-              title="generate chit"
-              description="Our CHIT generation feature provides a quick and convenient method for generating vouchers"
+              title="fund wallet"
+              description="Stay in control of your finances: Track every transaction with fintech's innovative tools."
               img="/assets/customer-feature-2.png"
             />
             <CustomerFeatureCard
-              title="generate chit"
-              description="Our CHIT generation feature provides a quick and convenient method for generating vouchers"
+              title="track transactions"
+              description="Track your financial journey: Fintech's transaction history feature puts your financial history at your fingertips."
               img="/assets/customer-feature-3.png"
             />
           </Flex>

@@ -1,6 +1,14 @@
 'use client';
 
-import { Box, Flex, Heading, Text, Image } from '@chakra-ui/react';
+import {
+  Box,
+  Flex,
+  Heading,
+  Text,
+  Image,
+  Button,
+  Icon,
+} from '@chakra-ui/react';
 
 import { ButtonComponent, IconButtonComponent } from '~/lib/components/Button';
 import { ChevronIcon } from '~/lib/components/Icons';
@@ -50,15 +58,22 @@ const Hero = () => {
                   width="241px"
                   onClick={() => {}}
                 />
-                <IconButtonComponent
-                  text="Learn More"
-                  color="brand.primary"
+                <Button
                   bg="text.700"
-                  icon={ChevronIcon}
+                  color="brand.primary"
+                  py="23px"
+                  px="18px"
+                  borderRadius="12px"
+                  fontWeight={600}
+                  _hover={{ bg: 'none' }}
                   width="168px"
-                  flip
                   onClick={() => {}}
-                />
+                >
+                  <Flex alignItems="center" gap={2} flexDir="row-reverse">
+                    <Icon as={ChevronIcon} fontSize={20} />
+                    <Text>Learn More</Text>
+                  </Flex>
+                </Button>
               </Flex>
             </Box>
           </Box>
