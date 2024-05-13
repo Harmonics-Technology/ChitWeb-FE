@@ -1,4 +1,11 @@
+'use client';
+
 import { Box, Image, Flex, Heading, Text } from '@chakra-ui/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const GetChit = () => {
   return (
@@ -20,13 +27,51 @@ const GetChit = () => {
             </Heading>
           </Box>
           <Box>
-            <Text fontSize={18} lineHeight="30px" color="text.400">
-              Our simple and clean interface makes it easy for you to locate
-              your desired service. All the services are accessible from the
-              home page, making it user-friendly. Here's a quick look that will
-              keep you longing. Download the CHIT app to enjoy the full
-              experience.
-            </Text>
+            <Swiper
+              pagination={{ clickable: true }}
+              modules={[Pagination, Autoplay]}
+              className="mySwiper"
+              slidesPerView={1}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              style={{ paddingBottom: '60px' }}
+            >
+              <SwiperSlide>
+                <Box>
+                  <Text fontSize={18} lineHeight="30px" color="text.400">
+                    Our simple and clean interface makes it easy for you to
+                    locate your desired service. All the services are accessible
+                    from the home page, making it user-friendly. Here's a quick
+                    look that will keep you longing. Download the CHIT app to
+                    enjoy the full experience.
+                  </Text>
+                </Box>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Box>
+                  <Text fontSize={18} lineHeight="30px" color="text.400">
+                    Our simple and clean interface makes it easy for you to
+                    locate your desired service. All the services are accessible
+                    from the home page, making it user-friendly. Here's a quick
+                    look that will keep you longing. Download the CHIT app to
+                    enjoy the full experience.
+                  </Text>
+                </Box>
+              </SwiperSlide>
+              <SwiperSlide>
+                <Box>
+                  <Text fontSize={18} lineHeight="30px" color="text.400">
+                    Our simple and clean interface makes it easy for you to
+                    locate your desired service. All the services are accessible
+                    from the home page, making it user-friendly. Here's a quick
+                    look that will keep you longing. Download the CHIT app to
+                    enjoy the full experience.
+                  </Text>
+                </Box>
+              </SwiperSlide>
+            </Swiper>
           </Box>
         </Box>
         <Box maxW="849px">

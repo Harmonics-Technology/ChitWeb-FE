@@ -121,6 +121,7 @@ export const ReviewCard = ({
         position="absolute"
         left="30px"
         top="-30px"
+        // zIndex='999'
       >
         <Image
           src={img}
