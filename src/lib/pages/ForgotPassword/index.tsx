@@ -16,11 +16,7 @@ const index = () => {
         justifyContent="center"
       >
         <Flex alignItems="center" gap="58px" my="14">
-          <Carousel
-            image="/assets/forgot-password.png"
-            title="Forgotten Your Password?"
-            description="Locked out? No problem! We’ll help you unlock your account securely  and get you back in action"
-          />
+          <Carousel />
           <ForgotPassword />
         </Flex>
       </Box>
