@@ -1,8 +1,16 @@
 'use client';
 
-import { Box, VStack, Flex, Heading, Text } from '@chakra-ui/react';
+import {
+  Box,
+  VStack,
+  Flex,
+  Heading,
+  Text,
+  Button,
+  Icon,
+} from '@chakra-ui/react';
 
-import { ButtonComponent, IconButtonComponent } from '~/lib/components/Button';
+import { ButtonComponent } from '~/lib/components/Button';
 import { ChevronIcon } from '~/lib/components/Icons';
 
 const Hero = () => {
@@ -34,15 +42,22 @@ const Hero = () => {
                   width="249px"
                   onClick={() => {}}
                 />
-                <IconButtonComponent
-                  text="Watch Live Video"
-                  color="brand.primary"
+                <Button
                   bg="text.700"
-                  icon={ChevronIcon}
-                  width="211px"
-                  flip
+                  color="brand.primary"
+                  py="23px"
+                  px="18px"
+                  borderRadius="12px"
+                  fontWeight={600}
+                  _hover={{ bg: 'none' }}
+                  width="168px"
                   onClick={() => {}}
-                />
+                >
+                  <Flex alignItems="center" gap={2} flexDir="row-reverse">
+                    <Icon as={ChevronIcon} fontSize={20} />
+                    <Text>Watch Live Video</Text>
+                  </Flex>
+                </Button>
               </Flex>
             </Box>
           </VStack>

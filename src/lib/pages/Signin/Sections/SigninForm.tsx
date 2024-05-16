@@ -33,7 +33,7 @@ const SigninForm = () => {
         <Box>
           <Stack spacing="16px">
             <Heading fontSize={40} fontWeight={600}>
-              Welcome Back
+              Welcome Back,
             </Heading>
             <Text fontSize={16} color="text.200">
               Please enter your details to continue
@@ -92,9 +92,11 @@ const SigninForm = () => {
                 <Box>
                   <Flex alignItems="center" justifyContent="space-between">
                     <Checkbox fontSize={14}>Remember Password</Checkbox>
-                    <Text fontSize={14} color="text.400">
-                      Forgot Passowrd?
-                    </Text>
+                    <Link href="/forgot-password">
+                      <Text fontSize={14} color="text.400">
+                        Forgot Passowrd?
+                      </Text>
+                    </Link>
                   </Flex>
                 </Box>
               </Box>

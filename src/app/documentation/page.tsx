@@ -1,4 +1,4 @@
-import Documentation from '~/lib/pages/Documentation';
+import Documentation from '~/lib/pages/Documentation2';
 
 const page = () => {
   return <Documentation />;

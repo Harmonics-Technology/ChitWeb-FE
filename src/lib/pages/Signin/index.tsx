@@ -15,11 +15,7 @@ const index = () => {
         justifyContent="center"
       >
         <Flex alignItems="center" gap="58px" my="14">
-          <Carousel
-            image="/assets/signup.png"
-            title="Seamless Transactions"
-            description="Stay in control of your finances; enjoy a hassle-free, secure and efficient way to make and receive payments."
-          />
+          <Carousel />
           <SigninForm />
         </Flex>
       </Box>

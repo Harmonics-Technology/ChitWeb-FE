@@ -1,4 +1,9 @@
 import { Box, VStack, Heading, Text, Stack, Flex } from '@chakra-ui/react';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 import { ReviewCard } from '~/lib/components/Cards';
 
@@ -29,26 +34,66 @@ const Patrons = () => {
         </Box>
 
         <Box>
-          <Flex alignItems="center" justifyContent="space-between">
-            <ReviewCard
-              img="/assets/face-card.jpg"
-              review="Lorem ipsum dolor sit amet consectetur. Integer et massa eu semper. Tellus nisl auctor imperdiet ut enim."
-              userName="Munira Adamu-Ibrahim"
-              post="Merchant User"
-            />
-            <ReviewCard
-              img="/assets/face-card.jpg"
-              review="Lorem ipsum dolor sit amet consectetur. Integer et massa eu semper. Tellus nisl auctor imperdiet ut enim."
-              userName="Munira Adamu-Ibrahim"
-              post="Merchant User"
-            />
-            <ReviewCard
-              img="/assets/face-card.jpg"
-              review="Lorem ipsum dolor sit amet consectetur. Integer et massa eu semper. Tellus nisl auctor imperdiet ut enim."
-              userName="Munira Adamu-Ibrahim"
-              post="Merchant User"
-            />
-          </Flex>
+          <Swiper
+            pagination={{ clickable: true }}
+            modules={[Pagination, Autoplay]}
+            className="mySwiper"
+            slidesPerView={3}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            style={{ height: 'auto', padding: '40px 0px' }}
+          >
+            <SwiperSlide>
+              <ReviewCard
+                img="/assets/face-card.jpg"
+                review="Lorem ipsum dolor sit amet consectetur. Integer et massa eu semper. Tellus nisl auctor imperdiet ut enim."
+                userName="Munira Adamu-Ibrahim"
+                post="Merchant User"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ReviewCard
+                img="/assets/face-card.jpg"
+                review="Lorem ipsum dolor sit amet consectetur. Integer et massa eu semper. Tellus nisl auctor imperdiet ut enim."
+                userName="Munira Adamu-Ibrahim"
+                post="Merchant User"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ReviewCard
+                img="/assets/face-card.jpg"
+                review="Lorem ipsum dolor sit amet consectetur. Integer et massa eu semper. Tellus nisl auctor imperdiet ut enim."
+                userName="Munira Adamu-Ibrahim"
+                post="Merchant User"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ReviewCard
+                img="/assets/face-card.jpg"
+                review="Lorem ipsum dolor sit amet consectetur. Integer et massa eu semper. Tellus nisl auctor imperdiet ut enim."
+                userName="Munira Adamu-Ibrahim"
+                post="Merchant User"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ReviewCard
+                img="/assets/face-card.jpg"
+                review="Lorem ipsum dolor sit amet consectetur. Integer et massa eu semper. Tellus nisl auctor imperdiet ut enim."
+                userName="Munira Adamu-Ibrahim"
+                post="Merchant User"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <ReviewCard
+                img="/assets/face-card.jpg"
+                review="Lorem ipsum dolor sit amet consectetur. Integer et massa eu semper. Tellus nisl auctor imperdiet ut enim."
+                userName="Munira Adamu-Ibrahim"
+                post="Merchant User"
+              />
+            </SwiperSlide>
+          </Swiper>
         </Box>
       </Stack>
     </Box>

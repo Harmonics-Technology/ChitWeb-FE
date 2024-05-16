@@ -37,12 +37,12 @@ const Features = () => {
             />
             <CustomerFeatureCard
               title="seamless transactions"
-              description="Our CHIT generation feature provides a quick and convenient method for generating vouchers"
+              description="Stay in control of your finances: Track every transaction with fintech's innovative tools."
               img="/assets/customer-feature-5.png"
             />
             <CustomerFeatureCard
               title="receive voucher payment"
-              description="Experience the convenience of digital vouchers: Receive voucher payment from customers."
+              description="Track your financial journey: Fintech's transaction history feature puts your financial history at your fingertips."
               img="/assets/customer-feature-6.png"
             />
           </Flex>

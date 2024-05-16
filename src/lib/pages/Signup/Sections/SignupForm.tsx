@@ -15,6 +15,7 @@ import {
   InputLeftAddon,
   Flex,
 } from '@chakra-ui/react';
+import Link from 'next/link';
 import React, { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
@@ -211,7 +212,7 @@ const SignupForm = () => {
           <Text color="text.900" fontSize={14} textAlign="center" mt="20px">
             Already have an account?{' '}
             <Box as="span" color="brand.primary">
-              Log in
+              <Link href="/signin">Log in</Link>
             </Box>
           </Text>
         </Box>

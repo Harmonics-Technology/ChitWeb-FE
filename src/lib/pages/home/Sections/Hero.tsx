@@ -84,12 +84,12 @@ const Hero = () => {
             lineHeight="95px"
             fontWeight={900}
           >
-            Revolutionize your{' '}
+            Revolutionise your{' '}
             <Box as="span" color="brand.primary" textDecoration="underline">
-              Payments
+              Payment
             </Box>{' '}
             with <br />
-            our fintech platform
+            our fintech platform.
           </Heading>
         </Box>
         <MockupIllustration />

@@ -11,6 +11,7 @@ import {
 import { usePathname } from 'next/navigation';
 import { useState, useLayoutEffect } from 'react';
 
+import { FacebookIcon, InstagramIcon, TwitterIcon } from '../components/Icons';
 import { PurpleChitLogo } from '../components/Logo';
 
 type ListItemsProps = {
@@ -114,6 +115,17 @@ const Footer = () => {
                 headingText="Contact Us"
                 items={['+2348180041801 or +2348162812758', 'info@chit.com']}
               />
+              <Flex alignItems="center" gap="25px" px="4">
+                <Link href="/">
+                  <InstagramIcon />
+                </Link>
+                <Link href="/">
+                  <FacebookIcon />
+                </Link>
+                <Link href="/">
+                  <TwitterIcon />
+                </Link>
+              </Flex>
             </Box>
             {/* </Flex>
             </Box> */}
