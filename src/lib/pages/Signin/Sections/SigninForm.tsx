@@ -14,12 +14,17 @@ import {
   Checkbox,
   Flex,
 } from '@chakra-ui/react';
+import { useForm, Resolver } from "react-hook-form"
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 import { ButtonComponent } from '~/lib/components/Button';
 import FormInput from '~/lib/utilities/FormInput';
+import { LoginRequest } from '~/services';
+
+
+
 
 const SigninForm = () => {
   const [email, setEmail] = useState<string>('');
@@ -109,7 +114,7 @@ const SigninForm = () => {
             width="100%"
             bg={isValidated ? 'bg.400' : 'bg.300'}
             color="text.500"
-            onClick={() => {}}
+            onClick={() => { }}
             text="Log in"
           />
           <Text color="text.900" fontSize={14} textAlign="center" mt="20px">
