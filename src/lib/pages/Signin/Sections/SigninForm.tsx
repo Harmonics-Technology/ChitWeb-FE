@@ -14,24 +14,42 @@ import {
   Checkbox,
   Flex,
 } from '@chakra-ui/react';
-import { useForm, Resolver } from "react-hook-form"
+import { classValidatorResolver } from '@hookform/resolvers/class-validator';
 import Link from 'next/link';
 import React, { useState } from 'react';
+import { useForm, Resolver } from "react-hook-form"
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 import { ButtonComponent } from '~/lib/components/Button';
 import FormInput from '~/lib/utilities/FormInput';
-import { LoginRequest } from '~/services';
+import PrimaryInput from '~/lib/utilities/FormInput/PrimaryInput';
+import { LoginRequestValidator } from '~/lib/utilities/FormValidationClasses/LoginRequestValidator';
+import type { LoginRequest } from '~/services';
 
 
-
+const resolver = classValidatorResolver(LoginRequestValidator);
 
 const SigninForm = () => {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [isValidated, setIsValidated] = useState<boolean>(false);
   const [show, setShow] = React.useState<boolean>(false);
-  const handleClick = () => setShow(!show);
+
+  const togglePasswordVisibility = () => setShow(!show);
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isValid  },
+  } = useForm<LoginRequest>({ resolver });
+
+  const onSubmit = async (data: LoginRequest) => {
+  }
+
+  const handleErrors = async (error: any) => {
+  }
+
+
   return (
     <Box w="500px" h="auto">
       <Stack spacing="40px">
@@ -46,86 +64,76 @@ const SigninForm = () => {
           </Stack>
         </Box>
 
-        <Box>
-          <FormControl>
-            <Stack spacing="24px">
-              <Box>
-                <FormLabel fontSize={14} color="text.200">
-                  Email/Phone Number/Chit ID
-                </FormLabel>
-                <FormInput
-                  type="email"
-                  width="100%"
-                  value={email}
-                  setValue={setEmail}
-                  placeholder="Enter your email or phone number or Chit ID"
-                />
-              </Box>
+        <form onSubmit={handleSubmit(onSubmit, handleErrors)}>
 
-              <Box>
-                <FormLabel fontSize={14} color="text.200">
-                  Password
-                </FormLabel>
-                <InputGroup size="md" mb="16px">
-                  <Input
-                    pr="4.5rem"
-                    w="100%"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    type={show ? 'text' : 'password'}
-                    placeholder="Enter unique password"
-                    py="20px"
-                    px="16px"
-                    fontSize={15}
-                    border="1px solid"
-                    borderColor="border.100"
-                    _placeholder={{ color: 'text.800', fontWeight: 400 }}
+          <Box>
+            <FormControl>
+              <Stack spacing="24px">
+                <Box>
+                  <PrimaryInput<LoginRequest>
+                    register={register}
+                    name="email"
+                    error={errors.email}
+                    defaultValue=''
+                    type="email"
+                    placeholder="Enter your email or phone number or Chit ID"
+                    label="Email/Phone Number/Chit ID"
                   />
-                  <InputRightElement width="4.5rem">
-                    <Button
-                      h="1.75rem"
-                      size="sm"
-                      onClick={handleClick}
-                      bg="none"
-                      _hover={{ bg: 'none' }}
-                    >
-                      {show ? <FaEye /> : <FaEyeSlash />}
-                    </Button>
-                  </InputRightElement>
-                </InputGroup>
+                </Box>
 
                 <Box>
-                  <Flex alignItems="center" justifyContent="space-between">
-                    <Checkbox fontSize={14}>Remember Password</Checkbox>
-                    <Link href="/forgot-password">
-                      <Text fontSize={14} color="text.400">
-                        Forgot Passowrd?
-                      </Text>
-                    </Link>
-                  </Flex>
+                  <PrimaryInput<LoginRequest>
+                    register={register}
+                    name="password"
+                    error={errors.password}
+                    defaultValue=''
+                    placeholder="Enter unique password"
+                    type={show ? 'text' : 'password'}
+                    icon
+                    passwordVisible={show}
+                    changeVisibility={togglePasswordVisibility}
+                    label="Password"
+                  />
+                  <Box mt={4}>
+                    <Flex alignItems="center" justifyContent="space-between">
+                      <Checkbox fontSize={14}>Remember Password</Checkbox>
+                      <Link href="/forgot-password">
+                        <Text fontSize={14} color="text.400">
+                          Forgot Passowrd?
+                        </Text>
+                      </Link>
+                    </Flex>
+                  </Box>
                 </Box>
-              </Box>
-            </Stack>
-          </FormControl>
-        </Box>
+              </Stack>
+            </FormControl>
+          </Box>
 
-        <Box>
-          <ButtonComponent
-            width="100%"
-            bg={isValidated ? 'bg.400' : 'bg.300'}
-            color="text.500"
-            onClick={() => { }}
-            text="Log in"
-          />
-          <Text color="text.900" fontSize={14} textAlign="center" mt="20px">
-            Don't have an account?{' '}
-            <Link href="/signup">
-              <Box as="span" color="brand.primary">
-                Sign up
-              </Box>
-            </Link>
-          </Text>
-        </Box>
+          <Box>
+            <Button
+              bg={isValid ? 'bg.400' : 'bg.300'}
+              color='text.500'
+              py="23px"
+              px="18px"
+              borderRadius="12px"
+              fontWeight="normal"
+              width="100%"
+              type='submit'
+            // border={`1px solid`}
+            // borderColor={color}
+            >
+              Log in
+            </Button>
+            <Text color="text.900" fontSize={14} textAlign="center" mt="20px">
+              Don't have an account?{' '}
+              <Link href="/signup">
+                <Box as="span" color="brand.primary">
+                  Sign up
+                </Box>
+              </Link>
+            </Text>
+          </Box>
+        </form>
       </Stack>
     </Box>
   );

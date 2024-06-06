@@ -9,10 +9,11 @@ import {
   InputLeftElement,
   HStack,
   Tooltip,
+  Button
 } from '@chakra-ui/react';
 import React from 'react';
 import type { FieldError, UseFormRegister, Path } from 'react-hook-form';
-import { FaRegEye, FaRegEyeSlash } from 'react-icons/fa';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import { HiInformationCircle } from 'react-icons/hi2';
 
 interface FormProps<TFormValues extends Record<string, unknown>> {
@@ -71,8 +72,8 @@ const PrimaryInput = <TFormValues extends Record<string, any>>({
       isInvalid={error as unknown as boolean}
       fontFamily="'DM Sans', sans-serif"
     >
-      <HStack align="center" spacing="0" mb=".5rem">
-        <FormLabel fontSize=".8rem" mb="0" textTransform="capitalize">
+      <HStack align="center" spacing="0" mb="">
+        <FormLabel fontSize={14} color="text.200" textTransform="capitalize">
           {label}
         </FormLabel>
         {toolTip && (
@@ -109,34 +110,35 @@ const PrimaryInput = <TFormValues extends Record<string, any>>({
           readOnly={readonly}
           _placeholder={{ color: 'text.800', fontWeight: 400, fontSize: 15 }}
           {...register(name, { required, ...validate })}
-          // type={type}
-          // // p="20px"
-          // placeholder={placeholder}
-          // w="100%"
-          // h={h}
-          // defaultValue={defaultValue}
-          // fontWeight={fontWeight}
-          // borderRadius={borderRadius}
-          // focusBorderColor={focusBorderColor || 'none'}
-          // borderColor="gray.400"
-          // disabled={disableLabel}
-          // // ref={ref || undefined}
-          // _placeholder={{
-          //   fontSize: '14px',
-          // }}
+        // type={type}
+        // // p="20px"
+        // placeholder={placeholder}
+        // w="100%"
+        // h={h}
+        // defaultValue={defaultValue}
+        // fontWeight={fontWeight}
+        // borderRadius={borderRadius}
+        // focusBorderColor={focusBorderColor || 'none'}
+        // borderColor="gray.400"
+        // disabled={disableLabel}
+        // // ref={ref || undefined}
+        // _placeholder={{
+        //   fontSize: '14px',
+        // }}
         />
         {icon && (
           <InputRightElement
-            onClick={() => changeVisibility()}
-            cursor="pointer"
-            color="brand.100"
-            h="full"
-            w="fit-content"
-            fontSize=".8rem"
-            right=".7rem"
-            fontWeight="500"
+            width="4.5rem"
           >
-            {otp || (passwordVisible ? <FaRegEye /> : <FaRegEyeSlash />)}
+            <Button
+              onClick={changeVisibility}
+              h="1.75rem"
+              size="sm"
+              bg="none"
+              _hover={{ bg: 'none' }}
+            >
+              {otp || (passwordVisible ? <FaEye /> : <FaEyeSlash />)}
+            </Button>
           </InputRightElement>
         )}
       </InputGroup>

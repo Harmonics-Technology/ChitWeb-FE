@@ -30,17 +30,20 @@
       }
     ],
     "strictNullChecks": true,
-    
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     "src",
+    "src/app",
+    "src/app/page.tsx",
     "commitlint.config.js",
     ".next/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
 }
