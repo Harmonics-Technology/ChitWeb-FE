@@ -16,34 +16,51 @@ import {
 } from '@chakra-ui/react';
 import { classValidatorResolver } from '@hookform/resolvers/class-validator';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { useCookies } from 'next-client-cookies';
 import React, { useState } from 'react';
 import { useForm, Resolver } from "react-hook-form"
+import toast from 'react-hot-toast';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 import { ButtonComponent } from '~/lib/components/Button';
 import FormInput from '~/lib/utilities/FormInput';
 import PrimaryInput from '~/lib/utilities/FormInput/PrimaryInput';
 import { LoginRequestValidator } from '~/lib/utilities/FormValidationClasses/LoginRequestValidator';
-import type { LoginRequest } from '~/services';
+import { IdentityService, type LoginRequest } from '~/services';
+
 
 
 const resolver = classValidatorResolver(LoginRequestValidator);
 
 const SigninForm = () => {
-  const [email, setEmail] = useState<string>('');
-  const [password, setPassword] = useState<string>('');
-  const [isValidated, setIsValidated] = useState<boolean>(false);
+  const cookies = useCookies();
+  const router = useRouter();
   const [show, setShow] = React.useState<boolean>(false);
+  const [loading, setLoading] = React.useState<boolean>(false);
 
   const togglePasswordVisibility = () => setShow(!show);
 
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid  },
+    formState: { errors, isValid, isLoading },
   } = useForm<LoginRequest>({ resolver });
 
   const onSubmit = async (data: LoginRequest) => {
+    setLoading(true);
+    try {
+
+      const response = await IdentityService.postIdentityApiIdentityLogin({requestBody: data});
+      // check if the api retunrs a 401
+      toast.success(`Welcome back`);
+      cookies.set('token', response.accessToken as string);
+      setLoading(false);
+      router.push('/user/dashboard');
+    } catch (error) {
+      setLoading(false);
+      toast.error('Invalid email or password');
+    }
   }
 
   const handleErrors = async (error: any) => {
@@ -119,6 +136,7 @@ const SigninForm = () => {
               fontWeight="normal"
               width="100%"
               type='submit'
+              isLoading={loading}
             // border={`1px solid`}
             // borderColor={color}
             >

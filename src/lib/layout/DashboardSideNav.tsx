@@ -3,7 +3,8 @@
 import { Box, Image, Flex, Text, Stack } from '@chakra-ui/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import React, { useState } from 'react';
+import { useCookies } from 'next-client-cookies';
+import React, { useState, useEffect } from 'react';
 
 import {
   DashboardIcon,
@@ -17,6 +18,12 @@ import type { SideNavLinkProps } from '~/lib/utilities/schema';
 
 const SideNavLink = ({ text, Icon, link }: SideNavLinkProps) => {
   const pathname = usePathname();
+  const cookies = useCookies();
+  useEffect(() => {
+    if (link.includes('signin')) {
+      cookies.remove('token');
+    }
+  }, [link, cookies])
   return (
     <Link href={link}>
       <Box
@@ -124,7 +131,7 @@ const DashboardSideNav = () => {
               link="/user/referrals"
             />
 
-            <SideNavLink text="Logout" Icon={LogoutIcon} link="/user/logout" />
+            <SideNavLink text="Logout" Icon={LogoutIcon} link="/signin" />
           </Stack>
         </Box>
       </Stack>

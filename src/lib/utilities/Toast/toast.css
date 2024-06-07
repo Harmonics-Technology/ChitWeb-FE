@@ -1,0 +1,35 @@
+.toaster {
+  box-shadow: none !important;
+  min-width: 100% !important;
+  height: 4rem;
+  border-radius: 0 !important;
+  align-items: flex-start !important;
+  padding-top: 3rem !important;
+  background: transparent !important;
+}
+.toaster .chakra-alert {
+  width: 80%;
+  height: 3.5rem;
+  padding: 0 1rem;
+}
+.loginToast {
+  height: 3rem;
+  margin: 1rem 1rem 0 auto !important;
+}
+.toasts {
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+}
+.go4109123758 {
+  min-height: 100vh !important;
+  background: rgba(0, 0, 0, 0.8) !important;
+}
+@media (max-width: 700px) {
+  .toaster .chakra-alert {
+    padding: 1rem;
+    height: auto;
+    width: 95%;
+  }
+}
