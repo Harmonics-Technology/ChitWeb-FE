@@ -1,3 +1,4 @@
-'use-client';
 export * from "./lib/FormInput";
-export * from "./lib/SimpleButton";
+import SimpleButton from "./lib/SimpleButton";
+
+export { SimpleButton };

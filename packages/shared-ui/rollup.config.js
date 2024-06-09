@@ -10,7 +10,7 @@ const packageJson = require("./package.json");
 
 export default [
   {
-    input: "src/index.ts",
+    input: "index.ts",
     output: [
       {
         file: packageJson.main,
@@ -29,12 +29,12 @@ export default [
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
       terser(),
-      postcss(), 
+      // postcss(), 
     ],
-    external: ["react", "react-dom"],
+    external: ["react", "react-dom", '@chakra-ui/react'],
   },
   {
-    input: "src/index.ts",
+    input: "index.ts",
     output: [{ file: "dist/types.d.ts", format: "es" }],
     plugins: [dts.default()],
   },

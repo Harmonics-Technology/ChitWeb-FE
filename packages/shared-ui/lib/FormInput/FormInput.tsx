@@ -20,7 +20,7 @@ const FormInput = ({
         py=" 20px"
         px="16px"
         value={value}
-        onChange={(e) => setValue(e.target.value)}
+        onChange={(e: any) => setValue(e.target.value)}
         placeholder={placeholder}
         fontSize={15}
         border="1px solid"

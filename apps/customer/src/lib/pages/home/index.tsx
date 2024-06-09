@@ -1,10 +1,14 @@
-'use-client';
+'use client';
 
 import { Flex } from '@chakra-ui/react';
+import { PrimaryInput, SimpleButton } from '@chitweb/shared-ui';
 // import PrimaryInput from '@chitweb/shared-ui';
-import SimpleButton from '@chitweb/shared-ui';
+// import { SimpleButton } from '@chitweb/shared-ui';
 
 const Home = () => {
+  const logSomething = () => {
+    console.log('clicked');
+  };
   return (
     <Flex
       direction="column"
@@ -14,6 +18,7 @@ const Home = () => {
       gap={4}
       mb={8}
       w="full"
+      onClick={() => console.log('yeH')}
     >
       {/* <PrimaryInput
         name="email"
@@ -25,7 +30,17 @@ const Home = () => {
         error={undefined}
         value=""
       />  */}
-      <SimpleButton />
+      <SimpleButton callback={logSomething} />
+      <PrimaryInput
+        name="email"
+        label="Email"
+        type="email"
+        placeholder="Enter your email"
+        required
+        register={() => {}}
+        error={undefined}
+        value=""
+      />
     </Flex>
   );
 };

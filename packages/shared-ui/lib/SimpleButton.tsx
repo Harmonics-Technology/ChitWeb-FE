@@ -1,9 +1,9 @@
-"use-client"
+
 import React from 'react'
 
-function SimpleButton() {
+function SimpleButton({callback}:{callback: () => void}) {
   return (
-    <button onClick={() => console.log("Clicked")}></button>
+    <button onClick={callback}> click here</button>
   )
 }
 

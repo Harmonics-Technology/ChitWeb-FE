@@ -277,6 +277,9 @@ importers:
       rollup-plugin-postcss:
         specifier: ^4.0.2
         version: 4.0.2(postcss@8.4.31)
+      tslib:
+        specifier: ^2.6.3
+        version: 2.6.3
       typescript:
         specifier: ^5.2.2
         version: 5.4.5
