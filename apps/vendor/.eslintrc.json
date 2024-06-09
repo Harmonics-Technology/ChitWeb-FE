@@ -1,0 +1,27 @@
+{
+  "extends": [
+    "sznm/react",
+    "plugin:react/jsx-runtime",
+    "plugin:@next/next/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars-experimental": "off",
+    "react/prop-types": "off",
+    "react/no-array-index-key": "off",
+    "react/no-unescaped-entities": "off",
+    "react/no-unused-prop-types": "off",
+    "sonarjs/no-duplicate-string": "off",
+    "import/no-cycle": "off",
+    "prettier/prettier": [
+        "off",
+        {
+            "endOfLine": "auto",
+            "singleQuote": true
+        }
+    ]
+  }
+}
