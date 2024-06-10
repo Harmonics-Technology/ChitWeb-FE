@@ -15,6 +15,9 @@
     "nx": "19.2.2",
     "rollup": "^4.14.0"
   },
+  "scripts": {
+    "netlify:build": "next build"
+  },
   "dependencies": {
     "next": "14.2.3",
     "react": "18.3.1",
