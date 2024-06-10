@@ -1,5 +1,5 @@
 [build]
-  command = 'pnpm build'
+  command = 'npx pnpm build'
 
 [build.environment]
   NODE_VERSION="20"
