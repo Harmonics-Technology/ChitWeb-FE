@@ -5,7 +5,7 @@
   "author": "sozonome",
   "scripts": {
     "dev": "nx next:dev",
-    "prebuild": "node ./netlify-prebuild.js",
+    "prebuild": "node netlify-prebuild.js",
     "build": "nx next:build",
     "turbo": "pnpm dlx turbo@2.0.1",
     "build:turbo": "pnpm turbo run build",
@@ -50,10 +50,6 @@
     "prettier": "^3.2.5",
     "standard-version": "^9.5.0",
     "typescript": "^5.4.5"
-  },
-  "engines": {
-    "node": ">=20.14.x",
-    "pnpm": ">=9"
   },
   "packageManager": "pnpm@9.1.2"
 }
