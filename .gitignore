@@ -104,3 +104,12 @@ sitemap*.xml
 # VS Code
 .vscode/settings.json
 
+
+
+
+.nx/cache
+.nx/workspace-data
+
+# Next.js
+.next
+out

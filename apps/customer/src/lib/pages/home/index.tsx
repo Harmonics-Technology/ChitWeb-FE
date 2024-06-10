@@ -1,7 +1,7 @@
 'use client';
 
 import { Flex } from '@chakra-ui/react';
-import { PrimaryInput, SimpleButton } from '@chitweb/shared-ui';
+import { SimpleButton, PrimaryInput } from '@chitweb/shared-ui';
 // import PrimaryInput from '@chitweb/shared-ui';
 // import { SimpleButton } from '@chitweb/shared-ui';
 
@@ -39,7 +39,6 @@ const Home = () => {
         required
         register={() => {}}
         error={undefined}
-        value=""
       />
     </Flex>
   );

@@ -1,0 +1,68 @@
+/* generated using openapi-typescript-codegen -- do no edit */
+/* istanbul ignore file */
+/* tslint:disable */
+/* eslint-disable */
+export var HttpStatusCode;
+(function (HttpStatusCode) {
+    HttpStatusCode[HttpStatusCode["_100"] = 100] = "_100";
+    HttpStatusCode[HttpStatusCode["_101"] = 101] = "_101";
+    HttpStatusCode[HttpStatusCode["_102"] = 102] = "_102";
+    HttpStatusCode[HttpStatusCode["_103"] = 103] = "_103";
+    HttpStatusCode[HttpStatusCode["_200"] = 200] = "_200";
+    HttpStatusCode[HttpStatusCode["_201"] = 201] = "_201";
+    HttpStatusCode[HttpStatusCode["_202"] = 202] = "_202";
+    HttpStatusCode[HttpStatusCode["_203"] = 203] = "_203";
+    HttpStatusCode[HttpStatusCode["_204"] = 204] = "_204";
+    HttpStatusCode[HttpStatusCode["_205"] = 205] = "_205";
+    HttpStatusCode[HttpStatusCode["_206"] = 206] = "_206";
+    HttpStatusCode[HttpStatusCode["_207"] = 207] = "_207";
+    HttpStatusCode[HttpStatusCode["_208"] = 208] = "_208";
+    HttpStatusCode[HttpStatusCode["_226"] = 226] = "_226";
+    HttpStatusCode[HttpStatusCode["_300"] = 300] = "_300";
+    HttpStatusCode[HttpStatusCode["_301"] = 301] = "_301";
+    HttpStatusCode[HttpStatusCode["_302"] = 302] = "_302";
+    HttpStatusCode[HttpStatusCode["_303"] = 303] = "_303";
+    HttpStatusCode[HttpStatusCode["_304"] = 304] = "_304";
+    HttpStatusCode[HttpStatusCode["_305"] = 305] = "_305";
+    HttpStatusCode[HttpStatusCode["_306"] = 306] = "_306";
+    HttpStatusCode[HttpStatusCode["_307"] = 307] = "_307";
+    HttpStatusCode[HttpStatusCode["_308"] = 308] = "_308";
+    HttpStatusCode[HttpStatusCode["_400"] = 400] = "_400";
+    HttpStatusCode[HttpStatusCode["_401"] = 401] = "_401";
+    HttpStatusCode[HttpStatusCode["_402"] = 402] = "_402";
+    HttpStatusCode[HttpStatusCode["_403"] = 403] = "_403";
+    HttpStatusCode[HttpStatusCode["_404"] = 404] = "_404";
+    HttpStatusCode[HttpStatusCode["_405"] = 405] = "_405";
+    HttpStatusCode[HttpStatusCode["_406"] = 406] = "_406";
+    HttpStatusCode[HttpStatusCode["_407"] = 407] = "_407";
+    HttpStatusCode[HttpStatusCode["_408"] = 408] = "_408";
+    HttpStatusCode[HttpStatusCode["_409"] = 409] = "_409";
+    HttpStatusCode[HttpStatusCode["_410"] = 410] = "_410";
+    HttpStatusCode[HttpStatusCode["_411"] = 411] = "_411";
+    HttpStatusCode[HttpStatusCode["_412"] = 412] = "_412";
+    HttpStatusCode[HttpStatusCode["_413"] = 413] = "_413";
+    HttpStatusCode[HttpStatusCode["_414"] = 414] = "_414";
+    HttpStatusCode[HttpStatusCode["_415"] = 415] = "_415";
+    HttpStatusCode[HttpStatusCode["_416"] = 416] = "_416";
+    HttpStatusCode[HttpStatusCode["_417"] = 417] = "_417";
+    HttpStatusCode[HttpStatusCode["_421"] = 421] = "_421";
+    HttpStatusCode[HttpStatusCode["_422"] = 422] = "_422";
+    HttpStatusCode[HttpStatusCode["_423"] = 423] = "_423";
+    HttpStatusCode[HttpStatusCode["_424"] = 424] = "_424";
+    HttpStatusCode[HttpStatusCode["_426"] = 426] = "_426";
+    HttpStatusCode[HttpStatusCode["_428"] = 428] = "_428";
+    HttpStatusCode[HttpStatusCode["_429"] = 429] = "_429";
+    HttpStatusCode[HttpStatusCode["_431"] = 431] = "_431";
+    HttpStatusCode[HttpStatusCode["_451"] = 451] = "_451";
+    HttpStatusCode[HttpStatusCode["_500"] = 500] = "_500";
+    HttpStatusCode[HttpStatusCode["_501"] = 501] = "_501";
+    HttpStatusCode[HttpStatusCode["_502"] = 502] = "_502";
+    HttpStatusCode[HttpStatusCode["_503"] = 503] = "_503";
+    HttpStatusCode[HttpStatusCode["_504"] = 504] = "_504";
+    HttpStatusCode[HttpStatusCode["_505"] = 505] = "_505";
+    HttpStatusCode[HttpStatusCode["_506"] = 506] = "_506";
+    HttpStatusCode[HttpStatusCode["_507"] = 507] = "_507";
+    HttpStatusCode[HttpStatusCode["_508"] = 508] = "_508";
+    HttpStatusCode[HttpStatusCode["_510"] = 510] = "_510";
+    HttpStatusCode[HttpStatusCode["_511"] = 511] = "_511";
+})(HttpStatusCode || (HttpStatusCode = {}));

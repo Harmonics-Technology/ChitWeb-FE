@@ -1,0 +1,11 @@
+{
+    "inputs": [
+      {
+        "inputURL": "https://chit-gateway-dev.azurewebsites.net/swagger/Wallet/swagger.json"
+      },
+      {
+        "inputURL": "https://chit-gateway-dev.azurewebsites.net/swagger/Identity/swagger.json"
+      }
+    ], 
+    "output": "./gateway.json"
+  }

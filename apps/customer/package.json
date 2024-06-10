@@ -1,15 +1,15 @@
 {
-  "name": "@chitweb/customer",
+  "name": "customer",
   "version": "0.1.0",
   "private": true,
   "author": "sozonome",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "nx next:dev",
+    "build": "nx next:build",
     "turbo": "pnpm dlx turbo@2.0.1",
     "build:turbo": "pnpm turbo run build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
-    "start": "next start",
+    "start": "nx next:start",
     "lint": "next lint",
     "lint:fix": "eslint src --fix && pnpm format",
     "type-check": "tsc --noEmit",
@@ -25,7 +25,6 @@
   "dependencies": {
     "@chakra-ui/next-js": "^2.2.0",
     "@chakra-ui/react": "^2.8.2",
-    "@chitweb/shared-ui": "workspace:^",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "framer-motion": "^11.2.6",
@@ -33,7 +32,9 @@
     "next-pwa": "^5.6.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-icons": "^5.2.1"
+    "react-icons": "^5.2.1",
+    "shared-services": "workspace:^",
+    "shared-ui": "workspace:^"
   },
   "devDependencies": {
     "@playwright/test": "^1.44.0",

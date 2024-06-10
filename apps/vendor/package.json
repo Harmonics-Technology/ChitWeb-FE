@@ -1,14 +1,14 @@
 {
-  "name": "@chitweb/vendor",
+  "name": "vendor",
   "version": "0.1.0",
   "private": true,
   "author": "harmonics-technology",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "nx next:dev",
+    "build": "nx next:build",
     "build:turbo": "turbo run build",
     "postbuild": "next-sitemap --config next-sitemap.config.js",
-    "start": "next start",
+    "start": "nx next:start",
     "lint": "next lint",
     "lint:fix": "eslint src --fix && pnpm format",
     "type-check": "tsc --noEmit",
@@ -26,7 +26,6 @@
   "dependencies": {
     "@chakra-ui/next-js": "^2.1.5",
     "@chakra-ui/react": "^2.8.1",
-    "@chitweb/shared-ui": "workspace:^",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@hookform/resolvers": "^3.5.0",
@@ -48,6 +47,8 @@
     "react-hot-toast": "^2.4.1",
     "react-icons": "^4.11.0",
     "react-multi-date-picker": "^4.5.1",
+    "shared-services": "workspace:^",
+    "shared-ui": "workspace:^",
     "swiper": "^11.1.0"
   },
   "devDependencies": {
