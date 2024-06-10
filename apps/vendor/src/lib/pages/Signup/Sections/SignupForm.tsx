@@ -20,7 +20,7 @@ import React, { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 import { ButtonComponent } from '~/lib/components/Button';
-import FormInput from '~/lib/utilities/FormInput';
+import { FormInput } from 'shared-ui';
 
 const SignupForm = () => {
   const [businessName, setBusinessName] = useState<string>('');

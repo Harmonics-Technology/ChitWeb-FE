@@ -12,12 +12,13 @@ import {
 } from '@chakra-ui/react';
 import React, { useState } from 'react';
 
+import { FormInput } from 'shared-ui';
+
 import {
   ButtonComponent,
   OutlineButtonComponent,
 } from '~/lib/components/Button';
 import { AvatarIcon, CopyIcon } from '~/lib/components/Icons';
-import FormInput from '~/lib/utilities/FormInput';
 
 const Profile = () => {
   const [firstName, setFirstName] = useState<string>('');

@@ -7,7 +7,7 @@ import CTASection from '~/lib/components/samples/CTASection';
 import SomeImage from '~/lib/components/samples/SomeImage';
 import SomeText from '~/lib/components/samples/SomeText';
 import EncryptionService from '~/lib/utilities/encryptions';
-import { IdentityService, LoginRequest, WalletService } from '~/services';
+import { IdentityService, LoginRequest, WalletService } from 'shared-services';
 
 import Features from './Sections/Features';
 import Hero from './Sections/Hero';

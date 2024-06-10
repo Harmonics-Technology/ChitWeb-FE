@@ -13,7 +13,7 @@ import {
 import React, { useState } from 'react';
 
 import { ButtonComponent } from '~/lib/components/Button';
-import FormInput from '~/lib/utilities/FormInput';
+import { FormInput } from 'shared-ui';
 import type { StepProps, CloseModalProps } from '~/lib/utilities/schema';
 
 const VerificationForm = ({ step, setStep }: StepProps) => {

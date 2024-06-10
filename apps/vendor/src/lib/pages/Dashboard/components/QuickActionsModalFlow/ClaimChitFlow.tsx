@@ -22,7 +22,7 @@ import {
   OutlineButtonComponent,
 } from '~/lib/components/Button';
 import { HomeIcon, GreyCopyIcon } from '~/lib/components/Icons';
-import FormInput from '~/lib/utilities/FormInput';
+import { FormInput } from 'shared-ui';
 import type { StepProps, CloseModalProps } from '~/lib/utilities/schema';
 
 const TransactionSuccess = ({ closeModal }: CloseModalProps) => {

@@ -24,7 +24,7 @@ import {
   IconButtonComponent,
 } from '~/lib/components/Button';
 import { GreyCopyIcon, UserIcon, HomeIcon } from '~/lib/components/Icons';
-import FormInput from '~/lib/utilities/FormInput';
+import { FormInput } from 'shared-ui';
 import type { StepProps } from '~/lib/utilities/schema';
 
 const PaymentSuccess = () => {

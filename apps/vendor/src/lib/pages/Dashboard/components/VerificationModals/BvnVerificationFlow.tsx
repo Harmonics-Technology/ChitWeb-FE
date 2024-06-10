@@ -14,7 +14,7 @@ import {
 import React, { useState } from 'react';
 
 import { ButtonComponent } from '~/lib/components/Button';
-import FormInput from '~/lib/utilities/FormInput';
+import { FormInput } from 'shared-ui';
 import type { CloseModalProps, StepProps } from '~/lib/utilities/schema';
 
 const BvnVerificationForm = ({ step, setStep }: StepProps) => {

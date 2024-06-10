@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next';
 
 import Providers from '~/app/providers';
 import Layout from '~/lib/layout';
-import { OpenAPI } from '~/services/core/OpenAPI';
+import { OpenAPI } from 'shared-services';
 
 type RootLayoutProps = {
   children: React.ReactNode;

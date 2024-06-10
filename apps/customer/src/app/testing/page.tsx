@@ -1,3 +1,3 @@
-import Home from '~/lib/pages/home/index'
+import Home from '~/lib/pages/home/index';
 
 export default Home;

@@ -13,7 +13,7 @@ import { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 import { ButtonComponent } from '~/lib/components/Button';
-import FormInput from '~/lib/utilities/FormInput';
+import { FormInput } from 'shared-ui';
 import type { CloseModalProps, StepProps } from '~/lib/utilities/schema';
 
 const VerificationSuccess = ({ closeModal }: CloseModalProps) => {
