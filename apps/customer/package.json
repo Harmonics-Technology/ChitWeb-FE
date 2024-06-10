@@ -5,7 +5,6 @@
   "author": "sozonome",
   "scripts": {
     "dev": "nx next:dev",
-    "prebuild": "node netlify-prebuild.js",
     "build": "nx next:build",
     "turbo": "pnpm dlx turbo@2.0.1",
     "build:turbo": "pnpm turbo run build",
