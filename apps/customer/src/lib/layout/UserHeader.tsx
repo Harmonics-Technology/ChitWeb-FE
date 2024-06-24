@@ -20,7 +20,7 @@ const IconContainer = ({ children }: { children: ReactNode }) => {
 
 const UserHeader = () => {
   return (
-    <Box w="100%" h="auto" mb='48px'>
+    <Box w="100%" h="auto" mb='20px'>
       <Flex justifyContent="space-between" alignItems="center" w="100%">
         <Box>
           <Stack spacing={1} color="text.200">

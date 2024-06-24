@@ -33,7 +33,7 @@ const RightPanel = () => {
               <VStack textAlign='center'>
                 <Image src='/assets/images/avatar-placeholder.png' mb='5px' w='100px' h='100px' borderRadius='50%' border='3px solid' borderColor='brand.primary' boxShadow='md' />
                 <Heading fontSize={18} fontWeight={600}>Munira Adamu-Ibrahim</Heading>
-                <Flex alignItems='center'>
+                <Flex alignItems='center' gap='5px'>
                   <Text fontWeight={500} fontSize={14} color='text.800'>Chit ID: <Box as='span' color='text.200' fontWeight={700}>Chit 10978 </Box></Text> <CopyIcon />
                 </Flex>
               </VStack>

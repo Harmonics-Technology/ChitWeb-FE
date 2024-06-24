@@ -58,7 +58,7 @@ const UserSideNav = () => {
       icon2: PaymentFilledIcon
     },
     {
-      title: 'Transaction',
+      title: 'Transactions',
       icon: TransactionOutlineIcon,
       icon2: TransactionFilledIcon
     },
@@ -119,7 +119,7 @@ const UserSideNav = () => {
               <SideNavLink
                 text="Transaction"
                 Icon={TransactionOutlineIcon}
-                link="/user/transaction"
+                link="/user/transactions"
               />
 
               <SideNavLink

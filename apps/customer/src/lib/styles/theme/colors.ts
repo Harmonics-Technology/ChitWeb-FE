@@ -61,6 +61,7 @@ const extendedColors: DeepPartial<
     300: '#FFEFCF',
     400: '#BF0202',
     500: '#319402',
+    600: '#047857'
   },
   options: {
     100: '#5D83DC',

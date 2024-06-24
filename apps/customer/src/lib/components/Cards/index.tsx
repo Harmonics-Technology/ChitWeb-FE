@@ -207,7 +207,7 @@ export const VirtualCard = () => {
       <Stack direction="column" justifyContent="space-between" h="100%">
         <Box>
           <Flex alignItems="center" justifyContent="space-between">
-            <Image src="/assets/chip.svg" />
+            <Image src="/assets/svgs/chip.svg" />
             <Button
               bg="none"
               p="0"
@@ -249,7 +249,7 @@ export const VirtualCard = () => {
                 </Heading>
               </Stack>
             </Box>
-            <Image src="/assets/mastercard-logo.svg" />
+            <Image src="/assets/svgs/mastercard-logo.svg" />
           </Flex>
         </Box>
       </Stack>

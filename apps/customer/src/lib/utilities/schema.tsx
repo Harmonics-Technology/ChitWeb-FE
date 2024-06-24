@@ -232,3 +232,7 @@ export interface BillerItemButtonProps {
   label: string;
   onClick: () => void;
 }
+
+export interface IconProps {
+  isActive: boolean;
+}
