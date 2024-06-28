@@ -29,7 +29,7 @@ const Profile = () => {
           <Flex alignItems="center" gap="24px">
             <Box w="140px" h="140px" position="relative">
               <Image
-                src="/assets/default-avatar-image.png"
+                src="/assets/images/avatar-placeholder.png"
                 w="100%"
                 h="100%"
                 borderRadius="50%"

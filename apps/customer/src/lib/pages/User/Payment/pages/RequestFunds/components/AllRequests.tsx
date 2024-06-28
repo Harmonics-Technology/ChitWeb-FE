@@ -20,12 +20,10 @@ import React, { useState } from 'react';
 
 import { OptionsIcon, TransactionTableIcon } from '~/lib/components/Icons';
 import CustomModal from '~/lib/components/Modal';
-import { TransactionListItem } from '~/lib/components/TransactionListItem';
+import { RequestFundItem } from '~/lib/components/TransactionListItem';
 import { TransactionListItemProps } from '~/lib/utilities/schema';
 
-import TransactionDetails from './TransactionDetails';
-
-const TransactionsList = () => {
+const AllRequests = () => {
   const [showTransactionDetailsModal, setShowTransactionDetailsModal] =
     useState<boolean>(false);
 
@@ -43,11 +41,11 @@ const TransactionsList = () => {
           <Thead>
             <Tr>
               <Th>
-                <Flex alignItems="center" gap="7px">
+                <Flex alignItems="center" gap="10px">
                   <Text
                     color="brand.primary"
                     fontWeight={700}
-                    fontSize={11}
+                    fontSize={12}
                     textTransform="uppercase"
                   >
                     Details
@@ -57,25 +55,11 @@ const TransactionsList = () => {
               </Th>
 
               <Th>
-                <Flex alignItems="center" gap="7px">
+                <Flex alignItems="center" gap="10px">
                   <Text
                     color="brand.primary"
                     fontWeight={700}
-                    fontSize={11}
-                    textTransform="uppercase"
-                  >
-                    type
-                  </Text>
-                  <TransactionTableIcon />
-                </Flex>
-              </Th>
-
-              <Th>
-                <Flex alignItems="center" gap="7px">
-                  <Text
-                    color="brand.primary"
-                    fontWeight={700}
-                    fontSize={11}
+                    fontSize={12}
                     textTransform="uppercase"
                   >
                     chit id
@@ -85,11 +69,11 @@ const TransactionsList = () => {
               </Th>
 
               <Th>
-                <Flex alignItems="center" gap="7px">
+                <Flex alignItems="center" gap="10px">
                   <Text
                     color="brand.primary"
                     fontWeight={700}
-                    fontSize={11}
+                    fontSize={12}
                     textTransform="uppercase"
                   >
                     status
@@ -99,11 +83,11 @@ const TransactionsList = () => {
               </Th>
 
               <Th>
-                <Flex alignItems="center" gap="7px">
+                <Flex alignItems="center" gap="10px">
                   <Text
                     color="brand.primary"
                     fontWeight={700}
-                    fontSize={11}
+                    fontSize={12}
                     textTransform="uppercase"
                   >
                     Date
@@ -113,11 +97,25 @@ const TransactionsList = () => {
               </Th>
 
               <Th>
-                <Flex alignItems="center" gap="7px">
+                <Flex alignItems="center" gap="10px">
                   <Text
                     color="brand.primary"
                     fontWeight={700}
-                    fontSize={11}
+                    fontSize={12}
+                    textTransform="uppercase"
+                  >
+                    Time
+                  </Text>
+                  <TransactionTableIcon />
+                </Flex>
+              </Th>
+
+              <Th>
+                <Flex alignItems="center" gap="10px">
+                  <Text
+                    color="brand.primary"
+                    fontWeight={700}
+                    fontSize={12}
                     textTransform="uppercase"
                   >
                     amount
@@ -128,86 +126,65 @@ const TransactionsList = () => {
             </Tr>
           </Thead>
           <Tbody>
-            <TransactionListItem
-              image="/assets/images/coursera.png"
+            <RequestFundItem
+              image="/assets/coursera.png"
               transactionTitle="Money Sent Withdrawal!"
               transactionAmount="20,000"
-              transactionType="Debit"
               transactionDate="01 APR 2023"
               transactionTime="10:50AM"
               action={openTransactionDetailsModal}
               transactionId="CT123478898"
-              transactionStatus="Success"
+              transactionStatus="Inv #024"
             />
 
-            <TransactionListItem
-              image="/assets/images/coursera.png"
+            <RequestFundItem
+              image="/assets/coursera.png"
               transactionTitle="Money Sent Withdrawal!"
               transactionAmount="20,000"
-              transactionType="Debit"
               transactionDate="01 APR 2023"
               transactionTime="10:50AM"
               action={openTransactionDetailsModal}
               transactionId="CT123478898"
-              transactionStatus="Success"
+              transactionStatus="Pending"
             />
 
-            <TransactionListItem
-              image="/assets/images/coursera.png"
+            <RequestFundItem
+              image="/assets/coursera.png"
               transactionTitle="Money Sent Withdrawal!"
               transactionAmount="20,000"
-              transactionType="Debit"
               transactionDate="01 APR 2023"
               transactionTime="10:50AM"
               action={openTransactionDetailsModal}
               transactionId="CT123478898"
-              transactionStatus="Success"
+              transactionStatus="Inv #024"
             />
 
-            <TransactionListItem
-              image="/assets/images/coursera.png"
-              transactionTitle="Money Sent Withdrawal"
+            <RequestFundItem
+              image="/assets/spotify.png"
+              transactionTitle="Money Sent Withdrawal!"
               transactionAmount="20,000"
-              transactionType="Debit"
               transactionDate="01 APR 2023"
               transactionTime="10:50AM"
               action={() => {}}
               transactionId="CT123478898"
-              transactionStatus="Success"
+              transactionStatus="Inv #024"
             />
 
-            <TransactionListItem
-              image="/assets/images/coursera.png"
+            <RequestFundItem
+              image="/assets/coursera.png"
               transactionTitle="Money Sent Withdrawal!"
               transactionAmount="20,000"
-              transactionType="Debit"
               transactionDate="01 APR 2023"
               transactionTime="10:50AM"
               action={openTransactionDetailsModal}
               transactionId="CT123478898"
-              transactionStatus="Success"
+              transactionStatus="Inv #024"
             />
           </Tbody>
         </Table>
       </TableContainer>
-      <CustomModal
-        isOpen={showTransactionDetailsModal}
-        onClose={() => setShowTransactionDetailsModal(false)}
-      >
-        <TransactionDetails
-          transactionTitle="Money Sent Withdrawal!"
-          transactionAmount="20,000"
-          transactionType="Sent"
-          transactionDate="01 APR 2023"
-          transactionId="CT123478898"
-          transactionStatus="Success"
-          transactionSource="Wallet"
-          downloadReceipt={() => {}}
-          shareReceipt={() => {}}
-        />
-      </CustomModal>
     </Box>
   );
 };
 
-export default TransactionsList;
+export default AllRequests;

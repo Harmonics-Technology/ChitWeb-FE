@@ -23,6 +23,7 @@ const CustomModal = ({ isOpen, onClose, children }: CustomModalprops) => {
         display="flex"
         alignItems="center"
         justifyContent="center"
+        borderRadius='40px'
       >
         <Box w="100%" h="auto">
           <ModalCloseButton mt="3" mb="5" />

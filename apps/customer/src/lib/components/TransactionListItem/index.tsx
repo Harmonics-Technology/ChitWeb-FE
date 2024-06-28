@@ -33,25 +33,26 @@ export const TransactionListItem = ({
     <Tr bg="actions.700" borderRadius="16px" style={{ borderRadius: '16px' }}>
       <Td color="border.900">
         <Flex alignItems="center" gap="8px">
-          <Image src={image} w="40px" h="40px" objectFit="cover" />
-          <Text fontWeight={600} fontSize={14}>
+          <Image src={image} w="30px" h="30px" objectFit="cover" />
+          <Text fontWeight={600} fontSize={13}>
             {transactionTitle}
           </Text>
         </Flex>
       </Td>
-      <Td color="status.100" fontWeight={500}>
+      <Td color="status.100" fontWeight={500} fontSize={14}>
         {transactionType}
       </Td>
-      <Td fontSize={14} color="border.200" fontWeight={500}>
+      <Td fontSize={13} color="border.200" fontWeight={500}>
         {transactionId}
       </Td>
       <Td>
         <Text
           w="auto"
-          fontSize={14}
+          fontSize={13}
           textAlign="center"
           borderRadius="4px"
-          p="2"
+          py="2"
+          px='1'
           bg="actions.800"
           color="actions.900"
           fontWeight={500}
@@ -61,10 +62,10 @@ export const TransactionListItem = ({
       </Td>
       <Td>
         <Stack color="border.200" spacing="1px">
-          <Text fontSize={14} fontWeight={500}>
+          <Text fontSize={13} fontWeight={500}>
             {transactionDate}
           </Text>
-          <Text fontSize={12} fontWeight={500}>
+          <Text fontSize={11} fontWeight={500}>
             {transactionTime}
           </Text>
         </Stack>
@@ -73,7 +74,7 @@ export const TransactionListItem = ({
         color="brand.900"
         bg="brand.100"
         textAlign="center"
-        fontSize={14}
+        fontSize={13}
         fontWeight={500}
       >
         {transactionAmount}

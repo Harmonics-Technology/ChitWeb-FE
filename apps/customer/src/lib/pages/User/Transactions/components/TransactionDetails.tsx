@@ -32,7 +32,7 @@ const TransactionDetails = ({
 }: TransactionDetailsProps) => {
   return (
     <Box>
-      <Heading mb="20px" fontSize={32} fontWeight={700} color="text.200">
+      <Heading mb="20px" fontSize={27} fontWeight={700} color="text.200">
         Transaction Details
       </Heading>
       <VStack spacing="15px" mb="20px">
@@ -40,18 +40,18 @@ const TransactionDetails = ({
           Cousera
         </Heading>
         <Box borderRadius="8px" px="3" py="2" bg="brand.100">
-          <Text color="brand.primary" fontSize={16} fontWeight={600}>
+          <Text color="brand.primary" fontSize={15} fontWeight={600}>
             Transaction Status: Successful
           </Text>
         </Box>
         <Box>
           <Flex alignItems="flex-end" gap="4px">
-            <Heading>$9.15</Heading>
-            <Text fontWeight={600}>USD</Text>
+            <Heading fontSize={30} fontWeight={700}>$9.15</Heading>
+            <Text fontSize={15} fontWeight={600}>USD</Text>
           </Flex>
         </Box>
       </VStack>
-      <Stack spacing="8px" mb="20px">
+      <Stack spacing="6px" mb="20px">
         <Box borderBottom="1px solid" borderColor="brand.100" py="3" px="2">
           <Flex alignItems="center" justifyContent="space-between">
             <Text fontWeight={500} color="border.200">
@@ -109,7 +109,7 @@ const TransactionDetails = ({
           onClick={() => {}}
           width="100%"
           color="text.500"
-          bg="bg.200"
+          bg="brand.primary"
         />
         <IconButtonComponent
           text="Share Receipt"
@@ -118,7 +118,7 @@ const TransactionDetails = ({
           onClick={() => {}}
           width="100%"
           bg="text.500"
-          color="bg.200"
+          color="brand.primary"
         />
       </Stack>
     </Box>

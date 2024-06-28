@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Image, Flex, Text, Stack, Heading, Button } from '@chakra-ui/react';
+import { Box, Image, Flex, Text, Stack, Heading, Button, Icon } from '@chakra-ui/react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useCookies } from 'next-client-cookies';
@@ -14,7 +14,7 @@ import {
 } from '~/lib/components/Icons';
 import type { SideNavLinkProps } from '~/lib/utilities/schema';
 
-const SideNavLink = ({ text, Icon, link }: SideNavLinkProps) => {
+const SideNavLink = ({ text, icon, link, activeIcon }: SideNavLinkProps) => {
   const pathname = usePathname();
   const cookies = useCookies();
   useEffect(() => {
@@ -31,13 +31,14 @@ const SideNavLink = ({ text, Icon, link }: SideNavLinkProps) => {
         px="32px"
         _hover={{ bg: 'brand.600'}}
         color='text.500'
-        bg={pathname.includes(link) ? 'brand.600' : 'none'}
+        bg={pathname === link ? 'brand.600' : 'none'}
         cursor="pointer"
-        borderRight={pathname.includes(link) ? '6px solid' : 'none'}
-        borderColor={pathname.includes(link) ? 'text.300' : 'none'}
+        borderRight={pathname === link ? '6px solid' : 'none'}
+        borderColor={pathname === link ? 'text.300' : 'none'}
       >
         <Flex alignItems="center" gap="15px">
-          <Icon isActive={pathname.includes(link)} />
+
+          <Icon as={pathname === link ? activeIcon : icon} />
           <Text>{text}</Text>
         </Flex>
       </Box>
@@ -106,25 +107,29 @@ const UserSideNav = () => {
             <Stack spacing="10px">
               <SideNavLink
                 text="Dashboard"
-                Icon={DashboardOutlineIcon}
+                icon={DashboardOutlineIcon}
+                activeIcon={DashboardFilledIcon}
                 link="/user"
               />
 
               <SideNavLink
                 text="Payment"
-                Icon={PaymentOutlineIcon}
+                icon={PaymentOutlineIcon}
+                activeIcon={PaymentFilledIcon}
                 link="/user/payment"
               />
 
               <SideNavLink
                 text="Transaction"
-                Icon={TransactionOutlineIcon}
+                icon={TransactionOutlineIcon}
+                activeIcon={TransactionFilledIcon}
                 link="/user/transactions"
               />
 
               <SideNavLink
                 text="Account"
-                Icon={AccountOutlineIcon}
+                icon={AccountOutlineIcon}
+                activeIcon={AccountFilledIcon}
                 link="/user/account"
               />
             </Stack>

@@ -25,19 +25,19 @@ import {
 const QuickActions = () => {
   const router = useRouter();
   return (
-    <Box bg="brand.100" borderRadius="12px" px="30px" py="30px">
+    <Box bg="brand.100" borderRadius="40px" px="30px" py="30px">
       <Stack spacing="32px">
         <Box>
-          <Heading fontSize={18} fontWeight={600}>
+          <Heading fontSize={20} fontWeight={700}>
             Quick actions
           </Heading>
         </Box>
         <Box>
           <Flex
             alignItems="center"
-            columnGap="20px"
-            rowGap="32px"
+            gap='20px'
             flexWrap="wrap"
+            justifyContent='center'
           >
             <QuickActionButton
               title="Add Funds"
@@ -69,12 +69,12 @@ const QuickActions = () => {
               icon={WithdrawIcon}
               onClick={() => {}}
             />
-            <QuickActionButton
+            {/* <QuickActionButton
               title="Invoice"
               bgColor="actions.600"
               icon={InvoiceIcon}
               onClick={() => router.push('/user/payment/invoice')}
-            />
+            /> */}
             <QuickActionButton
               title="Request Funds"
               bgColor="#FFF2E5"
@@ -93,12 +93,12 @@ const QuickActions = () => {
               icon={PayBillsIcon}
               onClick={() => router.push('/user/payment/pay-bills')}
             />
-            <QuickActionButton
+            {/* <QuickActionButton
               title="My Cards"
               bgColor="#E5FCFF"
               icon={MyCardIcon}
               onClick={() => {}}
-            />
+            /> */}
             <QuickActionButton
               title="Convert"
               bgColor="rgba(0, 86, 210, 0.1)"
@@ -111,12 +111,12 @@ const QuickActions = () => {
               icon={CryptoIcon}
               onClick={() => {}}
             />
-            <QuickActionButton
+            {/* <QuickActionButton
               title="Product/Services"
               bgColor="#E5FCFF"
               icon={ProductIcon}
               onClick={() => router.push('/user/payment/products')}
-            />
+            /> */}
             <QuickActionButton
               title="Scheduled Payments"
               bgColor="#FFF6E5"

@@ -78,8 +78,9 @@ export interface CarouselProps {
 
 export interface SideNavLinkProps {
   text: string;
-  Icon: any;
+  icon: any;
   link: string;
+  activeIcon: any;
 }
 
 export interface SideNavProps {
