@@ -17,9 +17,8 @@ const Index = () => {
       w="100%"
       minH="400px"
       bg="text.500"
-      boxShadow="xl"
       py="3"
-      px="5"
+      px="2"
       borderRadius="8px"
     >
       <Stack spacing="32px">

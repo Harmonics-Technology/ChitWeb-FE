@@ -22,7 +22,7 @@ const UserLayout = ({ children }: LayoutProps) => {
     <Box w='100%' position='relative'>
       <Flex>
         <UserSideNav />
-        <Box as="main" position='absolute' left="20%" w="55%" py='30px'>
+        <Box as="main" position='absolute' left="20%" w="55%" py='30px' overflow='hidden'>
           <UserHeader />
           {children}
         </Box>

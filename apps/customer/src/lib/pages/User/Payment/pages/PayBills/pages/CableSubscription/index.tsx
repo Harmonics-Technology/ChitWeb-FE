@@ -12,32 +12,32 @@ const Index = () => {
   const billers = [
     {
       name: 'DSTV',
-      icon: '/assets/dstv.png',
+      icon: '/assets/images/dstv.png',
     },
     {
       name: 'Startimes',
-      icon: '/assets/startimes.png',
+      icon: '/assets/images/startimes.png',
     },
     {
       name: 'GoTV',
-      icon: '/assets/gotv.png',
+      icon: '/assets/images/gotv.png',
     },
     {
       name: 'IrokoTV',
-      icon: '/assets/iroko.png',
+      icon: '/assets/images/iroko.png',
     },
     {
       name: 'RokuTV',
-      icon: '/assets/roku.png',
+      icon: '/assets/images/roku.png',
     },
     {
       name: 'IbakaTV',
-      icon: '/assets/ibaka.png',
+      icon: '/assets/images/ibaka.png',
     },
   ];
   const [openPaymentModal, setOpenPaymentModal] = useState<boolean>(false);
   return (
-    <Box borderRadius="8px" boxShadow="lg" p="6" minH="600px">
+    <Box borderRadius="8px" boxShadow="lg" py="6" px='3' minH="600px">
       <Stack spacing="64px">
         <BackButton
           title="TV and Cable Subscription"

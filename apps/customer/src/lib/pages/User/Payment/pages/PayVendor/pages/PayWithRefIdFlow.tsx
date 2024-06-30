@@ -184,7 +184,7 @@ const PayWithRefIdSummary = ({ step, setStep }: StepProps) => {
   );
 };
 
-const PayWithRefIdForm = ({ step, setStep }: StepProps) => {
+const PayWithRefIdForm = () => {
   return (
     <Box>
       <Stack spacing="32px">
@@ -208,10 +208,10 @@ const PayWithRefIdForm = ({ step, setStep }: StepProps) => {
           />
         </Box>
         <ButtonComponent
-          bg="bg.200"
+          bg="brand.primary"
           text="Proceed"
           color="text.500"
-          onClick={() => setStep(step + 1)}
+          onClick={() => {}}
           width="100%"
         />
       </Stack>
@@ -221,11 +221,11 @@ const PayWithRefIdForm = ({ step, setStep }: StepProps) => {
 
 const PayWithRefIdFlow = () => {
   const [step, setStep] = useState<number>(0);
-  const [openPaymentSuccessModal, setOpenPaymentSuccessModal] =
-    useState<boolean>(false);
+  const [openPaymentSuccessModal, setOpenPaymentSuccessModal] = useState<boolean>(false);
   return (
     <Box>
-      {step === 0 && <PayWithRefIdForm step={step} setStep={setStep} />}
+      <PayWithRefIdForm />
+      {/* {step === 0 && <PayWithRefIdForm step={step} setStep={setStep} />}
       {step === 1 && <PayWithRefIdSummary step={step} setStep={setStep} />}
       {step === 2 && (
         <TransactionPinForm
@@ -237,7 +237,7 @@ const PayWithRefIdFlow = () => {
         onClose={() => setOpenPaymentSuccessModal(false)}
       >
         <PaymentSuccess />
-      </CustomModal>
+      </CustomModal> */}
     </Box>
   );
 };

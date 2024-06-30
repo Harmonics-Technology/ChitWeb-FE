@@ -12,56 +12,56 @@ const Index = () => {
   const billers = [
     {
       name: 'Ikeja Electric',
-      icon: '/assets/ikeja.png',
+      icon: '/assets/images/ikeja.png',
     },
     {
       name: 'Eko Electric',
-      icon: '/assets/eko.png',
+      icon: '/assets/images/eko.png',
     },
     {
       name: 'Ibadan Electric',
-      icon: '/assets/ibadan.png',
+      icon: '/assets/images/ibadan.png',
     },
     {
       name: 'Enugu Electric',
-      icon: '/assets/enugu.png',
+      icon: '/assets/images/enugu.png',
     },
     {
       name: 'Yaba Electric',
-      icon: '/assets/yaba.png',
+      icon: '/assets/images/yaba.png',
     },
     {
       name: 'Abuja Electric',
-      icon: '/assets/abuja.png',
+      icon: '/assets/images/abuja.png',
     },
     {
       name: 'Kaduna Electric',
-      icon: '/assets/kaduna.png',
+      icon: '/assets/images/kaduna.png',
     },
     {
       name: 'Ikeja Electric',
-      icon: '/assets/ikeja.png',
+      icon: '/assets/images/ikeja.png',
     },
     {
       name: 'Eko Electric',
-      icon: '/assets/eko.png',
+      icon: '/assets/images/eko.png',
     },
     {
       name: 'Ibadan Electric',
-      icon: '/assets/ibadan.png',
+      icon: '/assets/images/ibadan.png',
     },
     {
       name: 'Enugu Electric',
-      icon: '/assets/enugu.png',
+      icon: '/assets/images/enugu.png',
     },
     {
       name: 'Yaba Electric',
-      icon: '/assets/yaba.png',
+      icon: '/assets/images/yaba.png',
     },
   ];
   const [openPaymentModal, setOpenPaymentModal] = useState<boolean>(false);
   return (
-    <Box borderRadius="8px" boxShadow="lg" p="6" minH="600px">
+    <Box borderRadius="8px" boxShadow="lg" py="6" px='3' minH="600px">
       <Stack spacing="64px">
         <BackButton title="Electricity" link="/user/payment/pay-bills" />
         <Box>

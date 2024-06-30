@@ -1,10 +1,14 @@
 import { Box, Heading, Image, Text, Stack, Flex } from '@chakra-ui/react';
-import React from 'react';
+import React, { useState } from 'react';
 
 import { ButtonComponent } from '~/lib/components/Button';
 import { WhiteSettingsIcon } from '~/lib/components/Icons';
+import RecurringPaymentFlow from '../../Transactions/components/RecurringPaymentFlow';
+import CustomModal from '~/lib/components/Modal';
+
 
 const RecurringPayments = () => {
+  const [openModal, setOpenModal] = useState<boolean>(false);
   return (
     <Box
       bg='status.600'
@@ -39,12 +43,18 @@ const RecurringPayments = () => {
               color="status.600"
               bg="text.500"
               width="231px"
-              onClick={() => {}}
+              onClick={() => setOpenModal(true)}
             />
             <Image src="/assets/gifs/calendar.gif" />
           </Flex>
         </Box>
       </Stack>
+      <CustomModal
+        isOpen={openModal}
+        onClose={() => setOpenModal(false)}
+      >
+        <RecurringPaymentFlow />
+      </CustomModal>
     </Box>
   );
 };

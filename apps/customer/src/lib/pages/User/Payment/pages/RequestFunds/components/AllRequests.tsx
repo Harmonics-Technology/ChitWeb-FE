@@ -127,7 +127,7 @@ const AllRequests = () => {
           </Thead>
           <Tbody>
             <RequestFundItem
-              image="/assets/coursera.png"
+              image="/assets/images/coursera.png"
               transactionTitle="Money Sent Withdrawal!"
               transactionAmount="20,000"
               transactionDate="01 APR 2023"
@@ -138,7 +138,7 @@ const AllRequests = () => {
             />
 
             <RequestFundItem
-              image="/assets/coursera.png"
+              image="/assets/images/coursera.png"
               transactionTitle="Money Sent Withdrawal!"
               transactionAmount="20,000"
               transactionDate="01 APR 2023"
@@ -149,7 +149,7 @@ const AllRequests = () => {
             />
 
             <RequestFundItem
-              image="/assets/coursera.png"
+              image="/assets/images/coursera.png"
               transactionTitle="Money Sent Withdrawal!"
               transactionAmount="20,000"
               transactionDate="01 APR 2023"
@@ -160,18 +160,18 @@ const AllRequests = () => {
             />
 
             <RequestFundItem
-              image="/assets/spotify.png"
+              image="/assets/images/coursera.png"
               transactionTitle="Money Sent Withdrawal!"
               transactionAmount="20,000"
               transactionDate="01 APR 2023"
               transactionTime="10:50AM"
-              action={() => {}}
+              action={() => { }}
               transactionId="CT123478898"
               transactionStatus="Inv #024"
             />
 
             <RequestFundItem
-              image="/assets/coursera.png"
+              image="/assets/images/coursera.png"
               transactionTitle="Money Sent Withdrawal!"
               transactionAmount="20,000"
               transactionDate="01 APR 2023"

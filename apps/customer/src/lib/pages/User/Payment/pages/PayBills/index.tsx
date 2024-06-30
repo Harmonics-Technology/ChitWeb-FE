@@ -11,37 +11,37 @@ const Index = () => {
   const bills = [
     {
       name: 'Electricity',
-      icon: '/assets/electricity.svg',
+      icon: '/assets/svgs/electricity.svg',
       link: '/user/payment/pay-bills/electricity',
     },
     {
       name: 'TV and Cable Subscription',
-      icon: '/assets/cable-tv.svg',
+      icon: '/assets/svgs/cable-tv.svg',
       link: '/user/payment/pay-bills/cable-subscription',
     },
     {
       name: 'Airtime and Data',
-      icon: '/assets/internet.svg',
+      icon: '/assets/svgs/internet.svg',
       link: '/user/payment/pay-bills/internet',
     },
     {
       name: 'Shopping',
-      icon: '/assets/shopping.svg',
+      icon: '/assets/svgs/shopping.svg',
       link: '/user/payment/shopping',
     },
     {
       name: 'School and Exam',
-      icon: '/assets/exam.svg',
+      icon: '/assets/svgs/exam.svg',
       link: '/user/payment/exam-subscription',
     },
     {
       name: 'Sport Betting',
-      icon: '/assets/betting.svg',
+      icon: '/assets/svgs/betting.svg',
       link: '/user/payment/sport-betting',
     },
     {
       name: 'Event Ticket',
-      icon: '/assets/event-ticket.svg',
+      icon: '/assets/svgs/event-ticket.svg',
       link: '/user/payment/event-ticket',
     },
   ];

@@ -82,16 +82,16 @@ const TransactionsDateFilter = () => {
   );
 };
 
-const SchedulePaymentButton = ({ openModal }: OpenModalProps) => {
+export const SchedulePaymentButton = ({ openModal }: OpenModalProps) => {
   return (
     <Button
-      boxShadow="md"
       color="text.500"
       fontWeight={500}
       borderRadius="6px"
       onClick={openModal}
       fontSize={25}
-      bg="bg.200"
+      bg="brand.primary"
+      boxShadow="xl"
     >
       +
     </Button>
@@ -99,8 +99,6 @@ const SchedulePaymentButton = ({ openModal }: OpenModalProps) => {
 };
 
 const SearchBar = ({ navPosition, setNavPosition }: SideNavProps) => {
-  const [openScheduledPayemtsModal, setOpenScheduledPaymentsModal] =
-    useState<boolean>(false);
   return (
     <Box>
       <Flex alignItems="center" gap="25px">
@@ -109,19 +107,7 @@ const SearchBar = ({ navPosition, setNavPosition }: SideNavProps) => {
           navPosition={navPosition}
           setNavPosition={setNavPosition}
         />
-        {/* {navPosition !== 0 && (
-          <SchedulePaymentButton
-            openModal={() => setOpenScheduledPaymentsModal(true)}
-          />
-        )} */}
       </Flex>
-      <CustomModal
-        isOpen={openScheduledPayemtsModal}
-        onClose={() => setOpenScheduledPaymentsModal(false)}
-      >
-        {navPosition === 1 && <ScheduledPaymentFlow />}
-        {navPosition === 2 && <RecurringPaymentFlow />}
-      </CustomModal>
     </Box>
   );
 };

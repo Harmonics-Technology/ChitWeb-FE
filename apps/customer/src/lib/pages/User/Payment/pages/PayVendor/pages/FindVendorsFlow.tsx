@@ -25,7 +25,7 @@ const PaymentSuccess = () => {
   return (
     <Box>
       <Box textAlign="center" mb="30px">
-        <Heading mb="16px" color="text.200" fontWeight={700} fontSize={32}>
+        <Heading mb="16px" color="text.200" fontWeight={700} fontSize={28}>
           Payment Successful
         </Heading>
         <Text> You've successfully made a voucher payment to XBOX </Text>
@@ -253,7 +253,7 @@ const PayVendorForm = ({ step, setStep }: StepProps) => {
   );
 };
 
-const VendorsList = ({ step, setStep }: StepProps) => {
+const VendorsList = () => {
   const list = [1, 2, 3, 4, 5];
   return (
     <Box>
@@ -285,7 +285,7 @@ const VendorsList = ({ step, setStep }: StepProps) => {
                 borderBottom="1px solid"
                 borderColor="border.100"
                 py="3"
-                onClick={() => setStep(step + 1)}
+                // onClick={() => setStep(step + 1)}
                 cursor="pointer"
               >
                 <Flex alignItems="center" gap="10px">
@@ -302,7 +302,7 @@ const VendorsList = ({ step, setStep }: StepProps) => {
           bg="bg.200"
           text="Proceed"
           color="text.500"
-          onClick={() => setStep(step + 1)}
+          onClick={() => {}}
           width="100%"
         />
       </Stack>
@@ -316,7 +316,7 @@ const FindVendorsFlow = () => {
     useState<boolean>(false);
   return (
     <Box>
-      {step === 0 && <VendorsList step={step} setStep={setStep} />}
+      {/* {step === 0 && <VendorsList step={step} setStep={setStep} />}
       {step === 1 && <PayVendorForm step={step} setStep={setStep} />}
       {step === 2 && <PayWithRefIdSummary step={step} setStep={setStep} />}
       {step === 3 && (
@@ -329,7 +329,8 @@ const FindVendorsFlow = () => {
         onClose={() => setOpenPaymentSuccessModal(false)}
       >
         <PaymentSuccess />
-      </CustomModal>
+      </CustomModal> */}
+      <VendorsList />
     </Box>
   );
 };

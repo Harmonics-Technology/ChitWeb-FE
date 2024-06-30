@@ -30,7 +30,7 @@ const PaymentSuccess = () => {
   return (
     <Box>
       <Box textAlign="center" mb="30px">
-        <Heading mb="16px" color="text.200" fontWeight={700} fontSize={32}>
+        <Heading mb="16px" color="text.200" fontWeight={700} fontSize={25}>
           Transaction Successful
         </Heading>
         <Text>
@@ -43,11 +43,11 @@ const PaymentSuccess = () => {
           color="text.500"
           text="Generate Receipt"
           onClick={() => {}}
-          bg="bg.200"
+          bg="brand.primary"
         />
         <OutlineButtonComponent
           width="100%"
-          color="bg.200"
+          color="brand.primary"
           text="Done"
           onClick={() => {}}
         />
@@ -60,8 +60,8 @@ const PaymentConfirmation = ({ step, setStep }: StepProps) => {
   return (
     <Box>
       <VStack spacing="30px">
-        <Image src="/assets/error-img.png" display="block" mx="auto" />
-        <Heading fontSize={32} textAlign="center" color="text.200">
+        <Image src="/assets/images/error-img.png" display="block" mx="auto" />
+        <Heading fontSize={25} textAlign="center" color="text.200">
           Are you sure?
         </Heading>
         <Text textAlign="center" color="text.400" fontSize={18}>
@@ -71,7 +71,7 @@ const PaymentConfirmation = ({ step, setStep }: StepProps) => {
           <Flex alignItems="center" gap="16px">
             <OutlineButtonComponent
               width="50%"
-              color="bg.200"
+              color="brand.primary"
               text="Cancel"
               onClick={() => {}}
             />
@@ -80,7 +80,7 @@ const PaymentConfirmation = ({ step, setStep }: StepProps) => {
               color="text.500"
               text="Proceed"
               onClick={() => setStep(step + 1)}
-              bg="bg.200"
+              bg="brand.primary"
             />
           </Flex>
         </Box>
@@ -95,7 +95,7 @@ const TransactionPinForm = ({ step, setStep }: StepProps) => {
     <Box>
       <Stack spacing="30px">
         <Box>
-          <Heading color="text.200" fontWeight={700} fontSize={32}>
+          <Heading color="text.200" fontWeight={700} fontSize={25}>
             Enter Transaction Pin
           </Heading>
         </Box>
@@ -139,7 +139,7 @@ const TransactionPinForm = ({ step, setStep }: StepProps) => {
               color="text.500"
               text="Proceed"
               onClick={() => setStep(step + 1)}
-              bg="bg.200"
+              bg="brand.primary"
             />
           </VStack>
         </Box>
@@ -152,12 +152,12 @@ const PaymentSummary = ({ step, setStep }: StepProps) => {
   return (
     <Box>
       <Box mb="30px">
-        <Heading mb="16px" color="text.200" fontWeight={700} fontSize={30}>
+        <Heading mb="16px" color="text.200" fontWeight={700} fontSize={25}>
           Recurring Payment Summary
         </Heading>
       </Box>
       <Box>
-        <Stack spacing="25px">
+        <Stack spacing="20px">
           <Stack spacing="10px" mb="10px">
             <Box borderBottom="1px solid" borderColor="brand.100" py="3" px="2">
               <Flex alignItems="center" justifyContent="space-between">
@@ -226,7 +226,7 @@ const PaymentSummary = ({ step, setStep }: StepProps) => {
               width="100%"
               text="Set Payment"
               color="text.500"
-              bg="bg.200"
+              bg="brand.primary"
               onClick={() => setStep(step + 1)}
             />
           </Stack>
@@ -242,8 +242,8 @@ const ScheduledPaymentForm = ({ step, setStep }: StepProps) => {
   return (
     <Box>
       <Box mb="30px">
-        <Heading mb="16px" color="text.200" fontWeight={700} fontSize={32}>
-          Recurring Payment
+        <Heading mb="16px" color="text.200" fontWeight={700} fontSize={25}>
+          Add Recurring Payment
         </Heading>
       </Box>
       <Stack spacing="20px">
@@ -329,7 +329,7 @@ const ScheduledPaymentForm = ({ step, setStep }: StepProps) => {
           width="100%"
           text="Proceed"
           color="text.500"
-          bg="bg.200"
+          bg="brand.primary"
           onClick={() => setStep(step + 1)}
         />
       </Stack>

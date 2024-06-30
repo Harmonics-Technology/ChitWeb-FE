@@ -212,19 +212,19 @@ export const RequestFundItem = ({
     <Tr bg="actions.700" borderRadius="16px" style={{ borderRadius: '12px' }}>
       <Td color="border.900">
         <Flex alignItems="center" gap="8px">
-          <Image src={image} w="50px" h="50px" objectFit="cover" />
-          <Text fontWeight={600} fontSize={14}>
+          <Image src={image} w="30px" h="30px" objectFit="cover" />
+          <Text fontWeight={600} fontSize={13}>
             {transactionTitle}
           </Text>
         </Flex>
       </Td>
-      <Td fontSize={14} color="border.200" fontWeight={500}>
+      <Td fontSize={13} color="border.200" fontWeight={500}>
         {transactionId}
       </Td>
       <Td>
         <Text
           w="auto"
-          fontSize={14}
+          fontSize={13}
           textAlign="center"
           borderRadius="4px"
           p="2"
@@ -236,12 +236,12 @@ export const RequestFundItem = ({
         </Text>
       </Td>
       <Td>
-        <Text fontSize={14} color="border.200" fontWeight={500}>
+        <Text fontSize={13} color="border.200" fontWeight={500}>
           {transactionDate}
         </Text>
       </Td>
       <Td>
-        <Text fontSize={14} fontWeight={500} color="border.200">
+        <Text fontSize={13} fontWeight={500} color="border.200">
           {transactionTime}
         </Text>
       </Td>
@@ -249,7 +249,7 @@ export const RequestFundItem = ({
         color="brand.900"
         bg="brand.100"
         textAlign="center"
-        fontSize={14}
+        fontSize={13}
         fontWeight={500}
       >
         {transactionAmount}
@@ -271,6 +271,7 @@ export const RequestFundItem = ({
               borderRadius="5px"
               mb="3"
               color="options.100"
+              fontSize={14}
             >
               View Request
             </MenuItem>
@@ -284,6 +285,7 @@ export const RequestFundItem = ({
               borderRadius="5px"
               mb="3"
               color="options.300"
+              fontSize={14}
             >
               Accept Request
             </MenuItem>
@@ -297,6 +299,7 @@ export const RequestFundItem = ({
               borderRadius="5px"
               mb="3"
               color="options.500"
+              fontSize={14}
             >
               Decline Request
             </MenuItem>

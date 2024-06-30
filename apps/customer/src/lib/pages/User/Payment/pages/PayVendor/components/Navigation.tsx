@@ -28,10 +28,10 @@ const NavigationItem = ({
       <Flex alignItems="center" gap="12px">
         <Icon as={icon} />
         <Stack spacing="6px">
-          <Heading fontSize={16} fontWeight={isActive ? 700 : 500}>
+          <Heading fontSize={15} fontWeight={isActive ? 700 : 500}>
             {title}
           </Heading>
-          <Text fontSize={14} color="text.400">
+          <Text fontSize={13} color="text.400">
             {description}
           </Text>
         </Stack>
@@ -42,7 +42,7 @@ const NavigationItem = ({
 
 const Navigation = ({ navPosition, setNavPosition }: SideNavProps) => {
   return (
-    <Box borderRight="1px solid" borderColor="border.100" px="7">
+    <Box borderRight="1px solid" w='50%' borderColor="border.100" pr="5">
       <Stack spacing="24px">
         <NavigationItem
           title="Pay using reference ID"
@@ -53,7 +53,7 @@ const Navigation = ({ navPosition, setNavPosition }: SideNavProps) => {
         />
         <NavigationItem
           title="Find listed vendors on CHIT"
-          description="Pay Vendor listed on CHIT"
+          description="Pay Vendors listed on CHIT"
           icon={CardTopUpIcon}
           isActive={navPosition === 1}
           onClick={() => setNavPosition(1)}

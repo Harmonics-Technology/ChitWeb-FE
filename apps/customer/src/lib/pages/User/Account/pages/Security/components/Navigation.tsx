@@ -1,4 +1,6 @@
 import { Box, Stack, Flex, Heading, Text } from '@chakra-ui/react';
+import { useState } from 'react';
+import DeleteAccountModal from '~/lib/components/DeleteAccountFlow'
 
 import {
   ChevronRightIcon,
@@ -48,6 +50,13 @@ const NavigationItem = ({
 };
 
 const Navigation = ({ navPosition, setNavPosition }: SideNavProps) => {
+  const [openModal, setOpenModal] = useState<boolean>(false);
+
+  const deleteAccount = () => {
+    setNavPosition(3);
+    setOpenModal(true);
+  }
+  
   return (
     <Box borderRight="1px solid" borderColor="border.100" pr="5">
       <Stack spacing="24px">
@@ -70,7 +79,8 @@ const Navigation = ({ navPosition, setNavPosition }: SideNavProps) => {
           onClick={() => setNavPosition(2)}
         />
         <Box
-          onClick={() => setNavPosition(3)}
+          // onClick={() => setNavPosition(3)}
+          onClick={deleteAccount}
           borderRadius="8px"
           border="1px solid"
           borderColor='border.100'
@@ -95,6 +105,7 @@ const Navigation = ({ navPosition, setNavPosition }: SideNavProps) => {
           </Flex>
         </Box>
       </Stack>
+      <DeleteAccountModal isOpen={openModal} closeModal={() => setOpenModal(false)} />
     </Box>
   );
 };

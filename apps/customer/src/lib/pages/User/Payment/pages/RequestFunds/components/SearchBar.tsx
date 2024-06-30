@@ -21,8 +21,8 @@ const TransactionsStatusFilter = ({
 }: SideNavProps) => {
   return (
     <Box
-      p="14px"
-      minW="300px"
+      p="8px"
+      w="45%"
       borderRadius="12px"
       border="2px solid"
       borderColor="brand.300"
@@ -57,8 +57,8 @@ const TransactionsStatusFilter = ({
 const TransactionsDateFilter = () => {
   return (
     <Box
-      minW="500px"
-      p="18px"
+      w="45%"
+      p="12px"
       borderRadius="12px"
       border="2px solid"
       borderColor="brand.300"
@@ -82,7 +82,7 @@ const TransactionsDateFilter = () => {
 const SchedulePaymentButton = ({ openModal }: OpenModalProps) => {
   return (
     <Button
-      boxShadow="md"
+      boxShadow="xl"
       color="text.500"
       fontWeight={500}
       borderRadius="6px"
@@ -100,7 +100,7 @@ const SearchBar = ({ navPosition, setNavPosition }: SideNavProps) => {
     useState<boolean>(false);
   return (
     <Box>
-      <Flex alignItems="center" gap="32px">
+      <Flex alignItems="center" gap="20px">
         <TransactionsDateFilter />
         <TransactionsStatusFilter
           navPosition={navPosition}

@@ -11,11 +11,11 @@ import PayVendorPages from './pages';
 const Index = () => {
   const [navPosition, setNavPosition] = useState<number>(0);
   return (
-    <Box p="5" boxShadow="lg" borderRadius="8px" minH="500px">
+    <Box py="5" minH="447px">
       <Stack spacing="64px">
         <BackButton link="/user/payment" title="Pay Vendor" />
         <Box>
-          <Flex gap="32px">
+          <Flex gap="20px">
             <Navigation
               navPosition={navPosition}
               setNavPosition={setNavPosition}

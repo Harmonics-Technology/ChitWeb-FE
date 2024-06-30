@@ -12,36 +12,36 @@ const Index = () => {
   const billers = [
     {
       name: 'MTN',
-      icon: '/assets/mtn.png',
+      icon: '/assets/images/mtn.png',
     },
     {
       name: 'Airtel',
-      icon: '/assets/airtel.png',
+      icon: '/assets/images/airtel.png',
     },
     {
       name: 'GLO',
-      icon: '/assets/glo.png',
+      icon: '/assets/images/glo.png',
     },
     {
       name: '9Mobile',
-      icon: '/assets/9mobile.png',
+      icon: '/assets/images/9mobile.png',
     },
     {
       name: 'Smile',
-      icon: '/assets/smile.png',
+      icon: '/assets/images/smile.png',
     },
     {
       name: 'Ntel',
-      icon: '/assets/ntel.png',
+      icon: '/assets/images/ntel.png',
     },
     {
       name: 'Vodafone',
-      icon: '/assets/vodafone.png',
+      icon: '/assets/images/vodafone.png',
     },
   ];
   const [openPaymentModal, setOpenPaymentModal] = useState<boolean>(false);
   return (
-    <Box borderRadius="8px" boxShadow="lg" p="6" minH="600px">
+    <Box borderRadius="8px" boxShadow="lg" py="6" px='3' minH="600px">
       <Stack spacing="64px">
         <BackButton title="Airtime and Data" link="/user/payment/pay-bills" />
         <Box>

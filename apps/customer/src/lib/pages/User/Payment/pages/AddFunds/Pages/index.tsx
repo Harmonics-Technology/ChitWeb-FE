@@ -9,10 +9,10 @@ import TopUpWithCard from './TopUpWithCard';
 
 const index = ({ navPosition, setNavPosition }: SideNavProps) => {
   return (
-    <Box w="50%" bg="options.800" borderRadius="40px" px="7" py="16">
+    <Box w="50%" bg="options.800" borderRadius="40px" px="7" py="16" minH='447px'>
       {navPosition === 0 && <BankTopUp />}
-      {navPosition === 1 && <TopUpWithCard />}
-      {navPosition === 2 && <RequestFromOthers />}
+      {/* {navPosition === 1 && <TopUpWithCard />} */}
+      {navPosition === 1 && <RequestFromOthers />}
     </Box>
   );
 };

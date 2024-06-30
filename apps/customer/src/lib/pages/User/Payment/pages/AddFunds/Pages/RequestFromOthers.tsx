@@ -208,7 +208,7 @@ const RequestFromOthers = () => {
           <Text color="text.400">Send a request to any CHIT user</Text>
         </Box>
         <Box>
-          <FormLabel fontSize={14}>Email/Chit ID</FormLabel>
+          <FormLabel fontSize={14}>Wallet ID</FormLabel>
           <Input
             type="email"
             _placeholder={{ fontSize: 14, color: 'text.800' }}
@@ -230,19 +230,19 @@ const RequestFromOthers = () => {
           />
         </Box>
         <ButtonComponent
-          bg="bg.200"
+          bg="brand.primary"
           text="Proceed"
           color="text.500"
-          onClick={() => setOpenPaymentSuccessModal(true)}
+          onClick={() => {}}
           width="100%"
         />
       </Stack>
-      <CustomModal
+      {/* <CustomModal
         isOpen={openPaymentSuccessModal}
         onClose={() => setOpenPaymentSuccessModal(false)}
       >
         <RequestModalFlow />
-      </CustomModal>
+      </CustomModal> */}
     </Box>
   );
 };

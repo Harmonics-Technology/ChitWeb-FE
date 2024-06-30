@@ -11,6 +11,7 @@ import {
   Select,
 } from '@chakra-ui/react';
 import React, { useState } from 'react';
+import DeleteAccountModal from '~/lib/components/DeleteAccountFlow'
 
 import { FormInput } from 'shared-ui';
 
@@ -22,6 +23,7 @@ import { AvatarIcon, CopyIcon } from '~/lib/components/Icons';
 
 const Profile = () => {
   const [firstName, setFirstName] = useState<string>('');
+  const [openModal, setOpenModal] = useState<boolean>(false);
   return (
     <Box>
       <Stack spacing="50px">
@@ -162,12 +164,14 @@ const Profile = () => {
               bg="text.500"
               border="2px solid"
               borderColor="options.700"
+              onClick={() => setOpenModal(true)}
             >
               Delete Profile
             </Button>
           </Flex>
         </Box>
       </Stack>
+      <DeleteAccountModal isOpen={openModal} closeModal={() => setOpenModal(false)} />
     </Box>
   );
 };

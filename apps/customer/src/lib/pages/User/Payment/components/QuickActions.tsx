@@ -79,7 +79,7 @@ const QuickActions = () => {
               title="Request Funds"
               bgColor="#FFF2E5"
               icon={RequestFundsIcon}
-              onClick={() => router.push('/user/payment/request-funds')}
+              onClick={() => router.push('/user/payment/requests')}
             />
             <QuickActionButton
               title="Pay Vendor"

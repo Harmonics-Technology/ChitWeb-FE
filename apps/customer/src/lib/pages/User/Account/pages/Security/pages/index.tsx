@@ -19,7 +19,7 @@ const index = ({ navPosition, setNavPosition }: SideNavProps) => {
       {navPosition === 0 && <TransactionPin />}
       {navPosition === 1 && <ChangePassword />}
       {navPosition === 2 && <TwoFA />}
-      {navPosition === 3 && <DeleteAccount />}
+      {/* {navPosition === 3 && <DeleteAccount />} */}
     </Box>
   );
 };

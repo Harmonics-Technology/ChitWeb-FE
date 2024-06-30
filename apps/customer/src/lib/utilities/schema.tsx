@@ -237,3 +237,8 @@ export interface BillerItemButtonProps {
 export interface IconProps {
   isActive: boolean;
 }
+
+export interface DeleteAccountModalProps {
+  closeModal: () => void;
+  isOpen: boolean;
+}

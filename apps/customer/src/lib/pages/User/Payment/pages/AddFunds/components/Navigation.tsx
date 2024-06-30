@@ -51,19 +51,19 @@ const Navigation = ({ navPosition, setNavPosition }: SideNavProps) => {
           isActive={navPosition === 0}
           onClick={() => setNavPosition(0)}
         />
-        <NavigationItem
+        {/* <NavigationItem
           title="Top-up with card"
           description="Fund wallet directly with your card"
           icon={CardTopUpIcon}
           isActive={navPosition === 1}
           onClick={() => setNavPosition(1)}
-        />
+        /> */}
         <NavigationItem
           title="Request from Others"
           description="Send a request to any Chit user"
           icon={RequestFundIcon}
-          isActive={navPosition === 2}
-          onClick={() => setNavPosition(2)}
+          isActive={navPosition === 1}
+          onClick={() => setNavPosition(1)}
         />
       </Stack>
     </Box>
