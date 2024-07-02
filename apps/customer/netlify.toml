@@ -1,7 +1,7 @@
 [build]
   command = 'pnpm workspace customer build'
-  base = "apps/customer/" # Set the base directory for each site
-  command = "npx pnpm i && npx pnpm run build" # Install dependencies and run the build command
+  base = "apps/customer/"
+  command = "npx pnpm i && npx pnpm run build" 
 
 [build.environment]
   NODE_VERSION="20"
