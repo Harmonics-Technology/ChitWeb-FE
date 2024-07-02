@@ -1,5 +1,5 @@
 [build]
-  command = 'pnpm netlify:build'
+  command = 'pnpm customer:build'
 
 [build.environment]
   NODE_VERSION="20"
