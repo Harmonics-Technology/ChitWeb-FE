@@ -2,7 +2,7 @@
 
 import { Box, Heading, Stack, Flex } from '@chakra-ui/react';
 import { useRouter } from 'next/navigation';
-import React from 'react';
+import React, {useState} from 'react';
 
 import { ActionButton, QuickActionButton } from '~/lib/components/Button';
 import {
@@ -21,9 +21,35 @@ import {
   ProductIcon,
   ScheduledPaymentsIcon,
 } from '~/lib/components/Icons';
+import CustomModal from '~/lib/components/Modal';
+import QuickActionModals from './QuickActionModals';
+
+
+
 
 const QuickActions = () => {
+
+
   const router = useRouter();
+  const [openGenerateChitModal, setOpenGenerateChitModal] = useState<boolean>(false);
+  const [openClaimChitModal, setOpenClaimChitModal] = useState<boolean>(false);
+  const [openTransferFundsModal, setOpenTransferFundsModal] = useState<boolean>(false);
+  const [openWithdrawModal, setOpenWithdrawModal] = useState<boolean>(false);
+  const [index, setIndex] = useState<number>(-1);
+
+  const handleOpenModal = (index: number) => {
+    setIndex(index);
+    if(index === 1){
+      setOpenGenerateChitModal(true);
+    }else if (index === 2) {
+      setOpenClaimChitModal(true);
+    }else if (index === 3) {
+      setOpenTransferFundsModal(true);
+    } else if (index === 4) {
+      setOpenWithdrawModal(true);
+    }
+  }
+
   return (
     <Box bg="brand.100" borderRadius="40px" px="30px" py="30px">
       <Stack spacing="32px">
@@ -49,25 +75,25 @@ const QuickActions = () => {
               title="Generate CHIT"
               bgColor="actions.200"
               icon={GenerateChitIcon}
-              onClick={() => {}}
+              onClick={() => handleOpenModal(1)}
             />
             <QuickActionButton
               title="Claim CHIT"
               bgColor="actions.300"
               icon={ClaimChitIcon}
-              onClick={() => {}}
+              onClick={() => handleOpenModal(2)}
             />
             <QuickActionButton
               title="Transfer Funds"
               bgColor="actions.400"
               icon={TransferFundsIcon}
-              onClick={() => {}}
+              onClick={() => handleOpenModal(3)}
             />
             <QuickActionButton
               title="Withdraw"
               bgColor="actions.500"
               icon={WithdrawIcon}
-              onClick={() => {}}
+              onClick={() => handleOpenModal(4)}
             />
             {/* <QuickActionButton
               title="Invoice"
@@ -126,6 +152,16 @@ const QuickActions = () => {
           </Flex>
         </Box>
       </Stack>
+      <CustomModal
+        isOpen= {
+          index === 1 ? openGenerateChitModal : index === 2 ? openClaimChitModal : index === 3 ? openTransferFundsModal : openWithdrawModal
+        }
+        onClose={
+          index === 1 ? () => setOpenGenerateChitModal(false) : index === 2 ? () => setOpenClaimChitModal(false) : index === 3 ? () => setOpenTransferFundsModal(false) : () => setOpenWithdrawModal(false)
+        }
+      >
+        <QuickActionModals index={index} />
+      </CustomModal>
     </Box>
   );
 };

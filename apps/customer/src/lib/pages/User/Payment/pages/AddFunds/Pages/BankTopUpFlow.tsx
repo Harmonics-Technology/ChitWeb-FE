@@ -16,7 +16,7 @@ import {
   OutlineButtonComponent,
   ButtonComponent,
 } from '~/lib/components/Button';
-import { HomeIcon, BlueDownloadIcon } from '~/lib/components/Icons';
+import { HomeIcon } from '~/lib/components/Icons';
 import type { StepProps, CloseModalProps } from '~/lib/utilities/schema';
 
 const TransactionSuccess = ({ closeModal }: CloseModalProps) => {

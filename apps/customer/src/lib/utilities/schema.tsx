@@ -246,3 +246,7 @@ export interface DeleteAccountModalProps {
 export interface RequestFundsStatusProps {
   status: string;
 }
+
+export interface IndexProps {
+  index: number
+}
