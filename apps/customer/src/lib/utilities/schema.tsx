@@ -242,3 +242,7 @@ export interface DeleteAccountModalProps {
   closeModal: () => void;
   isOpen: boolean;
 }
+
+export interface RequestFundsStatusProps {
+  status: string;
+}

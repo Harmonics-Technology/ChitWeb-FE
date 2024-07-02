@@ -165,7 +165,7 @@ export const BackButton = ({ link, title }: BackButtonProps) => {
       <Box>
         <Flex alignItems="center" gap="24px">
           <BackwardArrowIcon />
-          <Heading fontSize={30} color="text.200">
+          <Heading fontSize={25} color="text.200">
             {title}
           </Heading>
         </Flex>

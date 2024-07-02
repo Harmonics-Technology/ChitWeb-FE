@@ -17,6 +17,10 @@ import type {
   TransactionListItemProps,
   InvoiceListItemProps,
 } from '~/lib/utilities/schema';
+import CustomModal from '../Modal';
+import { useState } from 'react';
+import { set } from 'react-hook-form';
+import AcceptRequestModalFlow, { RequestDetails, DeclineRequestModalFlow } from '~/lib/pages/User/Payment/pages/RequestFunds/components/AcceptRequestModal';
 
 export const TransactionListItem = ({
   image,
@@ -208,6 +212,10 @@ export const RequestFundItem = ({
   transactionTitle,
   action,
 }: InvoiceListItemProps) => {
+  const [openRequestModal, setOpenRequestModal] = useState<boolean>(false);
+  const [openAcceptRequestModal, setOpenAcceptRequestModal] = useState<boolean>(false);
+  const [openDeclineRequestModal, setOpenDeclineRequestModal] = useState<boolean>(false);
+
   return (
     <Tr bg="actions.700" borderRadius="16px" style={{ borderRadius: '12px' }}>
       <Td color="border.900">
@@ -272,6 +280,7 @@ export const RequestFundItem = ({
               mb="3"
               color="options.100"
               fontSize={14}
+              onClick={() => setOpenRequestModal(true)}
             >
               View Request
             </MenuItem>
@@ -286,6 +295,7 @@ export const RequestFundItem = ({
               mb="3"
               color="options.300"
               fontSize={14}
+              onClick={() => setOpenAcceptRequestModal(true)}
             >
               Accept Request
             </MenuItem>
@@ -300,13 +310,31 @@ export const RequestFundItem = ({
               mb="3"
               color="options.500"
               fontSize={14}
+              onClick={() => setOpenDeclineRequestModal(true)}
             >
               Decline Request
             </MenuItem>
           </MenuList>
         </Menu>
-        {/* <Button bg='none' onClick={action}></Button> */}
       </Td>
+      <CustomModal
+        isOpen={openRequestModal}
+        onClose={() => setOpenRequestModal(false)}
+      >
+        <RequestDetails />
+      </CustomModal>
+      <CustomModal
+        isOpen={openAcceptRequestModal}
+        onClose={() => setOpenAcceptRequestModal(false)}
+      >
+        <AcceptRequestModalFlow />
+      </CustomModal>
+      <CustomModal
+        isOpen={openDeclineRequestModal}
+        onClose={() => setOpenDeclineRequestModal(false)}
+      >
+        <DeclineRequestModalFlow />
+      </CustomModal>
     </Tr>
   );
 };

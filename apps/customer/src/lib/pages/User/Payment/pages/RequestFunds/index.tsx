@@ -22,7 +22,7 @@ const Index = () => {
       borderRadius="8px"
     >
       <Stack spacing="32px">
-        <BackButton title="Request Funds" link="/user/payment" />
+        <BackButton title="Requests" link="/user/payment" />
         <SearchBar navPosition={navPosition} setNavPosition={setNavPosition} />
         <Box>
           {navPosition === 0 && <AllRequests />}
