@@ -1,6 +1,6 @@
 [build]
   base = "apps/customer/"
-  command = "npx pnpm i && npx pnpm run build" 
+  command = "npx pnpm i && npx pnpm run netlify:build" 
 
 [build.environment]
   NODE_VERSION="20"
